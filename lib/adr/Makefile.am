@@ -1,5 +1,6 @@
+#### Compiler and tool definitions shared by all build targets #####
 #
-# Copyright (C) 2010 Nikolai Kondrashov
+# Copyright (C) 2016 Anthony Campbell
 #
 # This file is part of hidrd.
 #
@@ -17,10 +18,25 @@
 # along with hidrd; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-noinst_LTLIBRARIES = libhidrd_code.la
 
-libhidrd_code_la_SOURCES = snk.c
+lib_LTLIBRARIES = libhidrd_adr.la
+
+libhidrd_adr_la_SOURCES = \
+    adr.c
+
+
+libhidrd_adr_la_LIBADD = \
+    ../util/libhidrd_util.la    \
+    ../opt/libhidrd_opt.la      \
+    ../strm/libhidrd_strm.la    \
+    ../fmt/libhidrd_fmt.la
+
+if ENABLE_FMT_XML
+libhidrd_adr_la_CFLAGS = @LIBXML2_CFLAGS@
+endif
+
 
 if ADD_OBSTACK
-libhidrd_code_la_LDFLAGS = -no-undefined
+libhidrd_adr_la_LDFLAGS = -no-undefined
 endif
+

@@ -14,7 +14,7 @@ export CROSS_PATH=${prefix}/bin/${CROSS_COMPILE}
 export PYTHON_INCLUDES=${prefix}/include/python2.7
 export PYTHON_LIBS="-L${prefix}/lib/python2.7 -L${prefix}/lib"
 
-# Non-exhaustive lists of compiler + binutils	
+# Non-exhaustive lists of compiler + binutils
 # Depending on what you compile, you might need more binutils than that
 export CPP=${CROSS_PATH}-cpp
 export AR=${CROSS_PATH}-ar
@@ -41,4 +41,4 @@ export CFLAGS="${CFLAGS} --sysroot=${SYSROOT} -I${SYSROOT}/include -I${prefix}/i
 export CPPFLAGS="${CFLAGS}"
 export LDFLAGS="${LDFLAGS} -L${SYSROOT}/lib -L${prefix}/lib"
 
-./configure  --without-python $* --host=${CROSS_COMPILE} --with-sysroot=${SYSROOT} --prefix=${prefix} "$@"  --build=x86_64-pc-linux-gnu 
+./configure  --without-python $* --host=${CROSS_COMPILE} --with-sysroot=${SYSROOT} --prefix=${prefix} "$@"  --build=x86_64-pc-linux-gnu   -enable-android

@@ -429,9 +429,7 @@ int
 main(int argc, char **argv)
 {
 
- #if defined __MINGW32__
-program_invocation_short_name = argv[0];
-#endif
+ 
     static const struct option long_opt_list[] = {
         {.val       = OPT_VAL_HELP,
          .name      = "help",

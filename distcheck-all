@@ -28,6 +28,7 @@ disable-tokens
 disable-names
 disable-xml-format
 disable-spec-format
+disable-android
 )
 
 function combine ()
