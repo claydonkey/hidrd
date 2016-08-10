@@ -38,28 +38,25 @@ AC_MSG_CHECKING([target os])
 
 case "$target_os" in
 	MINGW* | cygwin* | msys* | mingw* | cegcc*)
-		CFLAGS="-g -g3 -Os -Wall -Wextra -std=c99 -Wformat  $CFLAGS"
+		CFLAGS="-g   -O2    -Wall -Wextra  -DHAVE_CONFIG_H $CFLAGS"
 		LDFLAGS="$LDFLAGS -Wl,--no-undefined"
 		target_os=mingw
     ;;
 	ANDROID*)
 		target_os=android
-		CFLAGS="-Os -fPIE  -Wall -Wextra _H $CFLAGS"
+		CFLAGS="-Os -fPIE  -Wall -Wextra -DHAVE_CONFIG_H $CFLAGS"
 		LDFLAGS="$LDFLAGS -pie"
     ;;
 	    *)
 		target_os=linux
-		CFLAGS="-Os -Wall -Wextra -Werror _H $CFLAGS"
+		CFLAGS="-Os -Wall -Wextra -Werror -DHAVE_CONFIG_H $CFLAGS"
 AC_MSG_RESULT([$target_os])
     ;;
 esac
 AC_MSG_RESULT([$target_os])
 
-AC_MSG_CHECKING([checking for obstack_header])
 AC_CHECK_HEADERS([obstack.h],
         [found_obstack_headers=yes; break;])
-AS_IF([test "x$found_obstack_headers=yes" != "xyes"],
-[AC_MSG_RESULT([Unable to find the obstack headers])])
 AM_CONDITIONAL(ADD_OBSTACK, [test x$found_obstack_headers != xyes])
 
 AC_MSG_CHECKING(whether program_invocation_short_name is defined)

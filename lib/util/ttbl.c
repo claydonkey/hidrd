@@ -21,13 +21,9 @@
  *
  * @author Nikolai Kondrashov <spbnick@gmail.com>
  */
-#if defined HAVE_CONFIG_H
-#include "config.h"
-#if !defined HAVE_OBSTACK_H
-#define _FORTIFY_SOURCE 2
-#endif
-#endif
+
 #ifdef __MINGW32__
+#define _FORTIFY_SOURCE 2
 #include <ssp/string.h>
 #endif
 #include <assert.h>

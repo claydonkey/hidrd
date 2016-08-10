@@ -8,6 +8,9 @@
             <in>Makefile.am</in>
             <in>adr.h</in>
           </df>
+          <df name="fmt">
+            <in>test.c</in>
+          </df>
         </df>
       </df>
       <df name="lib">
@@ -154,7 +157,7 @@
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath></executablePath>
+          <executablePath>src\.libs\hidrd-convert.exe</executablePath>
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
@@ -164,6 +167,8 @@
       <item path="include/hidrd/adr/Makefile.am" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/hidrd/adr/adr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/hidrd/fmt/test.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/adr/Makefile.am" ex="false" tool="3" flavor2="0">
       </item>
@@ -343,6 +348,8 @@
       <item path="include/hidrd/adr/Makefile.am" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/hidrd/adr/adr.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/hidrd/fmt/test.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/adr/Makefile.am" ex="false" tool="3" flavor2="0">
       </item>
