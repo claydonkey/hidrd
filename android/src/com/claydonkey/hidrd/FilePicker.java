@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package com.claydonkey.hidrp;
+package com.claydonkey.hidrd;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -41,6 +41,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.claydonkey.hidrp.R;
 import java.io.*;
 import java.util.Arrays;
 
@@ -146,9 +147,9 @@ public class FilePicker extends ListActivity {
     }
 
     @Override
-    protected void onListItemClick(ListView l, View v, int position, long id) {
+    protected void onListItemClick(ListView listView, View view, int position, long id) {
 
-	File newFile = (File) l.getItemAtPosition(position);
+	File newFile = (File) listView.getItemAtPosition(position);
 
 	if (newFile.isFile()) {
 	    Intent extra = new Intent();
@@ -159,7 +160,7 @@ public class FilePicker extends ListActivity {
 	    Directory = newFile;
 	    refreshFilesList();
 	}
-	super.onListItemClick(l, v, position, id);
+	super.onListItemClick(listView, view, position, id);
 
     }
 

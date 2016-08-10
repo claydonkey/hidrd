@@ -1,4 +1,4 @@
-package com.claydonkey.hidrp;
+package com.claydonkey.hidrd;
 
 import java.io.File;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import com.claydonkey.hidrp.R;
 
 public class MainActivity extends Activity implements OnClickListener {
 
