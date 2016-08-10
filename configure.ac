@@ -38,18 +38,18 @@ AC_MSG_CHECKING([target os])
 
 case "$target_os" in
 	MINGW* | cygwin* | msys* | mingw* | cegcc*)
-		CFLAGS="-g -g3 -Os -Wall -Wextra -std=c99 -Wformat  -DHAVE_CONFIG_H $CFLAGS"
+		CFLAGS="-g -g3 -Os -Wall -Wextra -std=c99 -Wformat  $CFLAGS"
 		LDFLAGS="$LDFLAGS -Wl,--no-undefined"
 		target_os=mingw
     ;;
 	ANDROID*)
 		target_os=android
-		CFLAGS="-Os -fPIE  -Wall -Wextra -DHAVE_CONFIG_H $CFLAGS"
+		CFLAGS="-Os -fPIE  -Wall -Wextra _H $CFLAGS"
 		LDFLAGS="$LDFLAGS -pie"
     ;;
 	    *)
 		target_os=linux
-		CFLAGS="-Os -Wall -Wextra -Werror -DHAVE_CONFIG_H $CFLAGS"
+		CFLAGS="-Os -Wall -Wextra -Werror _H $CFLAGS"
 AC_MSG_RESULT([$target_os])
     ;;
 esac
