@@ -41,7 +41,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.claydonkey.hidrp.R;
 import java.io.*;
 import java.util.Arrays;
 
@@ -62,7 +61,7 @@ public class FilePicker extends ListActivity {
 	InputStream in = getApplicationContext().getAssets().open(assetFilePath);
 	OutputStream out = new FileOutputStream(destinationFilePath);
 
-	byte[] buf = new byte[1024];
+	byte[] buf = new byte[5024];
 	int len;
 	while ((len = in.read(buf)) > 0) {
 	    out.write(buf, 0, len);
@@ -154,6 +153,7 @@ public class FilePicker extends ListActivity {
 	if (newFile.isFile()) {
 	    Intent extra = new Intent();
 	    extra.putExtra(EXTRA_FILE_PATH, newFile.getAbsolutePath());
+	    String result = convertXMLtoCode(newFile.getAbsolutePath(),newFile.getParent() +"/test.txt");
 	    setResult(RESULT_OK, extra);
 	    finish();
 	} else {
@@ -256,5 +256,17 @@ public class FilePicker extends ListActivity {
 	    // No extensions has been set. Accept all file extensions.
 	    return true;
 	}
+
+    }
+
+    public native String convertXMLtoCode(String inFile , String outFile);
+
+    /* this is used to load the library on application
+     * startup. The library has already been unpacked into
+     * /data/data/com.claydonkey.algorithms/lib/libhello-jni.so at
+     * installation time by the package manager.
+     */
+    static {
+	System.loadLibrary("hidrd_adr");
     }
 }

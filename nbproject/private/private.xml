@@ -10,7 +10,31 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/include/hidrd/opt/tkns.h</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/util/fd.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/configure.ac</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/include/hidrd/cfg.h.m4</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/include/hidrd/util/obstack.h</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/include/hidrd/usage/type.h</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/usage/type.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/util/num.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/src/hidrd-convert.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/util/hex.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/Makefile.am</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/fmt/read.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/util/obstack.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/util/fmt.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/distcheck-all</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/include/hidrd/util/char.h</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/tools/start_gdbd.sh</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/src/Makefile.am</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/include/hidrd/util/unit.h</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/include/hidrd/Makefile.am</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/include/hidrd/util/num.h</file>
             <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/adr/adr.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/include/hidrd/util/hex.h</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/lib/util/ttbl.c</file>
+            <file>file:/D:/Users/anthony/Documents/Minnow/Source/Convolve/hidrd-master/Makefile.am</file>
         </group>
     </open-files>
 </project-private>

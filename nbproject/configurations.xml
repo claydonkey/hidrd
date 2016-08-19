@@ -8,9 +8,6 @@
             <in>Makefile.am</in>
             <in>adr.h</in>
           </df>
-          <df name="fmt">
-            <in>test.c</in>
-          </df>
         </df>
       </df>
       <df name="lib">
@@ -133,7 +130,7 @@
                    displayName="Important Files"
                    projectFiles="false"
                    kind="IMPORTANT_FILES_FOLDER">
-      <itemPath>Makefile</itemPath>
+      <itemPath>lib/.gdbinit</itemPath>
       <itemPath>configure</itemPath>
       <itemPath>nbproject/private/launcher.properties</itemPath>
     </logicalFolder>
@@ -146,7 +143,7 @@
   <confs>
     <conf name="MinGW64" type="0">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>x86_64-w64-mingw32|MinGW</compilerSet>
         <dependencyChecking>false</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
@@ -167,8 +164,6 @@
       <item path="include/hidrd/adr/Makefile.am" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/hidrd/adr/adr.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/hidrd/fmt/test.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/adr/Makefile.am" ex="false" tool="3" flavor2="0">
       </item>
@@ -327,7 +322,7 @@
     </conf>
     <conf name="Android64" type="0">
       <toolsSet>
-        <compilerSet>AndroidArm64_21|MinGW</compilerSet>
+        <compilerSet>aarch64-linux-android|MinGW</compilerSet>
         <dependencyChecking>false</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
@@ -338,18 +333,16 @@
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath></executablePath>
+          <executablePath>D:\\Users\\anthony\\Documents\\Minnow\\Source\\Convolve\\hidrd-master\\tools\\System\\app_process64</executablePath>
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
-          <preBuildCommand>android64_configure.sh prefix=/MinGW</preBuildCommand>
+          <preBuildCommand>tools/android64_configure.sh /android64</preBuildCommand>
         </preBuild>
       </makefileType>
       <item path="include/hidrd/adr/Makefile.am" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/hidrd/adr/adr.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/hidrd/fmt/test.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="lib/adr/Makefile.am" ex="false" tool="3" flavor2="0">
       </item>

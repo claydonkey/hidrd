@@ -1,4 +1,7 @@
-hidrd_itemdir = $(includedir)/hidrd/adr
+hidrd_adrdir = $(includedir)/hidrd/adr
 
-hidrd_item_HEADERS = \
+
+
+hidrd_adr_HEADERS = \
   adr.h
+

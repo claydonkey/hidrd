@@ -1,4 +1,4 @@
-#### Compiler and tool definitions shared by all build targets #####
+hidrd_fmtdir = $(includedir)/hidrd/fmt#### Compiler and tool definitions shared by all build targets #####
 #
 # Copyright (C) 2016 Anthony Campbell
 #
@@ -20,6 +20,8 @@
 
 
 lib_LTLIBRARIES = libhidrd_adr.la
+
+hidrd_adrdir = $(includedir)/hidrd/adr
 
 libhidrd_adr_la_SOURCES = \
     adr.c
