@@ -94,6 +94,7 @@ hidrd_hex_src_fmtpos(const hidrd_src *src, size_t pos)
     (void)src;
 
     if (line >= 0xFFFF)
+
         snprintf(line_buf, sizeof(line_buf), ">= 65536");
     else
         snprintf(line_buf, sizeof(line_buf), "%zu", line + 1);

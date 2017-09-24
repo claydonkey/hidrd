@@ -22,7 +22,7 @@
 AC_PREREQ(2.61)
 AC_INIT([hidrd], [0.2])
 AC_CONFIG_AUX_DIR([auxdir])
-AM_INIT_AUTOMAKE([1.9 -Wall foreign])
+AM_INIT_AUTOMAKE([1.9 -Wall foreign  -Wno-portability])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4/autoconf])
 
@@ -39,6 +39,11 @@ CFLAGS="-Os -Wall -Wextra -Werror -DHAVE_CONFIG_H $CFLAGS"
 AC_CHECK_HEADERS([obstack.h],
         [found_obstack_headers=yes; break;])
 AM_CONDITIONAL(ADD_OBSTACK, [test x$found_obstack_headers != xyes])
+
+
+#AC_DEFINE(snprintf, __mingw_printf , mingw uses its own snprintf function)
+
+#AC_DEFINE( __USE_MINGW_ANSI_STDIO , 0 , disablevsnprintf in various headers)
 
   AC_HEADER_STDC
 AC_CHECK_FUNC([bcopy],AC_DEFINE([HAVE_BCOPY], [], [ mingw32has no poix bcopy use memcopy instead]) ,)

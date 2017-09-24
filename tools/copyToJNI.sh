@@ -8,3 +8,4 @@ cp $SDIR/../lib/opt/.libs/*.so $SDIR/../android/libs/arm64-v8a
 cp $SDIR/../lib/item/.libs/*.so $SDIR/../android/libs/arm64-v8a
 cp $SDIR/../lib/usage/.libs/*.so $SDIR/../android/libs/arm64-v8a
 cp $SDIR/../lib/util/.libs/*.so $SDIR/../android/libs/arm64-v8a
+cp $SDIR/../src/.libs/hidrd-convert $SDIR/../android/libs/arm64-v8a/libhidrd-convert.so

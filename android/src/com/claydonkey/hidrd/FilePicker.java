@@ -1,4 +1,4 @@
-/*
+/* 
  * The MIT License
  *
  * Copyright 2016 Anthony Campbell.
@@ -21,6 +21,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+/**
+ * @author Anthony Campbell contact@claydonkey.com
+*/
 package com.claydonkey.hidrd;
 
 import java.io.File;

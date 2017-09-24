@@ -41,7 +41,7 @@
  char * program_invocation_short_name;
 #endif
 #endif
-#if defined __MINGW32__   &! defined  __x86_64__   
+#if defined __MINGW32__   &! defined  __x86_64__
 #define      S_IRGRP 0
 #define	S_IWGRP 0
 #define 	S_IROTH 0
@@ -431,7 +431,8 @@ typedef enum opt_val {
     OPT_VAL_OUTPUT_OPTIONS,
 } opt_val;
 
-
+static int stop =1;
+static int cnt =0;
 int
 main(int argc, char **argv)
 {
@@ -582,7 +583,10 @@ main(int argc, char **argv)
         usage(stderr, program_invocation_short_name);
         return 1;
     }
-
+    while (stop==1)
+    {	usleep(1000);
+	cnt++;
+    }
     /*
      * Run
      */

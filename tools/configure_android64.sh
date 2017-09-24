@@ -15,7 +15,7 @@ export CROSS_COMPILE=aarch64-linux-android
 
 export prefix="$1"
 export SYSROOT=${prefix}/sysroot/usr
-export CFLAGS="-ggdb -shared -fPIE -I${ANDROID_PREFIX}/include/libxml2 -I${ANDROID_PREFIX}/include/python2.7 " 
+export CFLAGS="-g -ggdb -shared -fPIE -I${ANDROID_PREFIX}/include/libxml2 -I${ANDROID_PREFIX}/include/python2.7 " 
 #-DHAVE_IEEEFP_H=0 -DHAVE_SSIZE_T -DPY_FORMAT_SIZE_T=l -DPY_FORMAT_LONG_LONG=ll
 export CROSS_PATH=${prefix}/bin/${CROSS_COMPILE}
 export PYTHON_INCLUDES=${prefix}/include/python2.7
@@ -36,6 +36,6 @@ echo CFLAGS="${CFLAGS}"
 
 export LDFLAGS="${LDFLAGS} -pie -L${SYSROOT}/lib -L${prefix}/lib -llog"
 
-./$SDIR/../configure --disable-android --host=${CROSS_COMPILE}   --prefix=${prefix}  --build=x86_64-pc-linux-gnu --enable-debug --with-sysroot=$1  $2
+./$SDIR/../configure --host=${CROSS_COMPILE}   --prefix=${prefix}  --build=x86_64-pc-linux-gnu --enable-debug --with-sysroot=$1  $2
 
 exit 0

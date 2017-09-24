@@ -46,6 +46,8 @@ hidrd_fd_read_whole(int fd, void **pbuf, size_t *psize)
     size_t  size        = 0;
     ssize_t read_size;
 
+
+
     new_buf = malloc(new_alloc);
     if (new_buf == NULL)
         goto cleanup;
@@ -69,8 +71,8 @@ hidrd_fd_read_whole(int fd, void **pbuf, size_t *psize)
 
     if (errno != 0)
     {
-     //   fprintf(stderr, "fd.c before cleanup : %s\n", strerror(errno));
-        goto cleanup;
+        fprintf(stderr, "fd.c before cleanup : %s\n", strerror(errno));
+       goto cleanup;
     }
     new_buf = realloc(buf, size);
     if (size > 0 && new_buf == NULL)
@@ -86,7 +88,7 @@ hidrd_fd_read_whole(int fd, void **pbuf, size_t *psize)
 
     if (psize != NULL)
         *psize = size;
- //   fprintf(stderr, "fd.c Failed to read input: %s\n", strerror(errno));
+    fprintf(stderr, "fd.c Failed to read input: %s\n", strerror(errno));
     result = true;
 
 cleanup:

@@ -7,3 +7,4 @@
 #
 /android64/bin/aarch64-linux-android-gdb    $(dirname $0)/System/app_process64
 
+#c:msys2/android64/bin/aarch64-linux-android-gdb    System/app_process64
