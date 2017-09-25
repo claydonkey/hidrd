@@ -32,20 +32,37 @@ CFLAGS=$CFLAGS
 # To have empty CFLAGS instead of undefined and '-g -O2' by default
 
 target_os=`uname -s`
-AC_MSG_RESULT([$target_os])
 
-CFLAGS="-Os -Wall -Wextra -Werror -DHAVE_CONFIG_H $CFLAGS"
+AC_MSG_RESULT([configuring for $target_os])
 
-AC_CHECK_HEADERS([obstack.h],
-        [found_obstack_headers=yes; break;])
+case "$target_os" in
+    MINGW* | cygwin* | msys* | mingw* | cegcc*)
+        CFLAGS="-g   -O2 -Wno-format   -Wall -Wextra  -DHAVE_CONFIG_H $CFLAGS"
+        LDFLAGS="$LDFLAGS -Wl,--no-undefined"
+        target_os=mingw
+    ;;
+    ANDROID*)
+        target_os=android
+        CFLAGS="-Os -fPIE  -Wall -Wextra -DHAVE_CONFIG_H $CFLAGS"
+        LDFLAGS="$LDFLAGS -pie"
+    ;;
+        *)
+        target_os=linux
+        CFLAGS="-Os -Wall -Wextra -Werror -DHAVE_CONFIG_H $CFLAGS"
+    ;;
+esac
+
+AC_CHECK_HEADERS([obstack.h], [found_obstack_headers=yes; break;])
 AM_CONDITIONAL(ADD_OBSTACK, [test x$found_obstack_headers != xyes])
 
+AM_CONDITIONAL([MINGW_FIX], [test "x$target_os" = xmingw])
+AM_COND_IF([MINGW_FIX],
+[AC_MSG_RESULT([configure: MinGW Strings])
+AC_DEFINE(snprintf, __mingw_printf , mingw uses its own snprintf function)
+AC_DEFINE( __USE_MINGW_ANSI_STDIO , 0 , disablevsnprintf in various headers)
+])
 
-#AC_DEFINE(snprintf, __mingw_printf , mingw uses its own snprintf function)
-
-#AC_DEFINE( __USE_MINGW_ANSI_STDIO , 0 , disablevsnprintf in various headers)
-
-  AC_HEADER_STDC
+AC_HEADER_STDC
 AC_CHECK_FUNC([bcopy],AC_DEFINE([HAVE_BCOPY], [], [ mingw32has no poix bcopy use memcopy instead]) ,)
 
 AC_MSG_CHECKING(whether program_invocation_short_name is defined)
@@ -187,17 +204,17 @@ AC_CANONICAL_HOST
 
 case $host_os in
      linux-androideabi)
-		enable_android=yes
-		;;
+        enable_android=yes
+        ;;
      linux-android)
-		enable_android=yes
-		;;
+        enable_android=yes
+        ;;
      '')
-		enable_android=no
-		;;
+        enable_android=no
+        ;;
      *)
-		AC_MSG_NOTICE([android not present])
-		;;
+        AC_MSG_NOTICE([android not present])
+        ;;
 esac
 
 
