@@ -22,7 +22,7 @@
 AC_PREREQ(2.61)
 AC_INIT([hidrd], [0.2])
 AC_CONFIG_AUX_DIR([auxdir])
-AM_INIT_AUTOMAKE([1.9 -Wall foreign])
+AM_INIT_AUTOMAKE([1.9 -Wall foreign -Wno-portability])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_MACRO_DIR([m4/autoconf])
 
@@ -31,7 +31,6 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 CFLAGS=$CFLAGS
 # To have empty CFLAGS instead of undefined and '-g -O2' by default
 
-### HOST FOR CROSS-COMPILING
 target_os=`uname -s`
 
 AC_MSG_RESULT([configuring for $target_os])

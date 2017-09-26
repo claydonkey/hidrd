@@ -431,8 +431,10 @@ typedef enum opt_val {
     OPT_VAL_OUTPUT_OPTIONS,
 } opt_val;
 
+#ifdef GDB_DEBUG
 static int stop =1;
 static int cnt =0;
+#endif
 int
 main(int argc, char **argv)
 {
@@ -583,10 +585,13 @@ main(int argc, char **argv)
         usage(stderr, program_invocation_short_name);
         return 1;
     }
+
+#ifdef GDB_DEBUG
     while (stop==1)
     {	usleep(1000);
 	cnt++;
     }
+#endif
     /*
      * Run
      */

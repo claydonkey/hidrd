@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="100">
+<configurationDescriptor version="97">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
       <df name="android">
@@ -30,6 +30,7 @@
           </df>
           <df name="rsObj">
           </df>
+          <in>proguard.txt</in>
         </df>
         <df name="gen">
           <df name="com">
@@ -75,6 +76,8 @@
             </df>
           </df>
         </df>
+        <in>JNI_HEADER.txt</in>
+        <in>proguard-project.txt</in>
       </df>
       <df name="autom4te.cache">
       </df>
@@ -110,10 +113,12 @@
               <in>snk.h</in>
             </df>
             <df name="xml">
+              <in>cfg.h</in>
               <in>prop.h</in>
               <in>snk.h</in>
               <in>src.h</in>
             </df>
+            <in>cfg.h</in>
             <in>code.h</in>
             <in>hex.h</in>
             <in>inst.h</in>
@@ -189,9 +194,13 @@
             </df>
           </df>
           <df name="usage">
+            <in>all.h</in>
             <in>id.h</in>
             <in>id_desc.h</in>
+            <in>id_desc_list.h</in>
+            <in>page.h</in>
             <in>page_desc.h</in>
+            <in>page_desc_list.h</in>
             <in>type.h</in>
           </df>
           <df name="util">
@@ -210,6 +219,7 @@
             <in>ttbl.h</in>
             <in>unit.h</in>
           </df>
+          <in>cfg.h</in>
           <in>fmt.h</in>
           <in>item.h</in>
           <in>opt.h</in>
@@ -222,21 +232,33 @@
           <in>adr.c</in>
         </df>
         <df name="fmt">
+          <df name=".libs">
+          </df>
           <df name="code">
+            <df name=".libs">
+            </df>
             <in>snk.c</in>
           </df>
           <df name="hex">
+            <df name=".libs">
+            </df>
             <in>snk.c</in>
             <in>src.c</in>
           </df>
           <df name="natv">
+            <df name=".libs">
+            </df>
             <in>snk.c</in>
             <in>src.c</in>
           </df>
           <df name="read_test_data">
           </df>
           <df name="spec">
+            <df name=".libs">
+            </df>
             <df name="snk">
+              <df name=".libs">
+              </df>
               <in>ent.c</in>
               <in>ent_list.c</in>
               <in>item.c</in>
@@ -249,7 +271,11 @@
           <df name="write_test_data">
           </df>
           <df name="xml">
+            <df name=".libs">
+            </df>
             <df name="snk">
+              <df name=".libs">
+              </df>
               <in>element.c</in>
               <in>element.h</in>
               <in>element_break.c</in>
@@ -260,6 +286,8 @@
               <in>item.h</in>
             </df>
             <df name="src">
+              <df name=".libs">
+              </df>
               <in>element.c</in>
               <in>element.h</in>
               <in>element_bitmap.c</in>
@@ -284,6 +312,8 @@
           <in>xml_test.c</in>
         </df>
         <df name="item">
+          <df name=".libs">
+          </df>
           <in>any.c</in>
           <in>any_test.c</in>
           <in>basic.c</in>
@@ -296,6 +326,8 @@
           <in>short.c</in>
         </df>
         <df name="opt">
+          <df name=".libs">
+          </df>
           <in>inst.c</in>
           <in>list.c</in>
           <in>name_tkn.c</in>
@@ -309,16 +341,24 @@
           <in>value_tkn.c</in>
         </df>
         <df name="strm">
+          <df name=".libs">
+          </df>
           <df name="snk">
+            <df name=".libs">
+            </df>
             <in>inst.c</in>
             <in>type.c</in>
           </df>
           <df name="src">
+            <df name=".libs">
+            </df>
             <in>inst.c</in>
             <in>type.c</in>
           </df>
         </df>
         <df name="usage">
+          <df name=".libs">
+          </df>
           <in>all.c</in>
           <in>id.c</in>
           <in>id_desc.c</in>
@@ -329,6 +369,8 @@
           <in>type.c</in>
         </df>
         <df name="util">
+          <df name=".libs">
+          </df>
           <in>bool.c</in>
           <in>buf.c</in>
           <in>char.c</in>
@@ -353,12 +395,15 @@
         </df>
       </df>
       <df name="src">
+        <df name=".libs">
+        </df>
         <in>hidrd-convert.c</in>
       </df>
       <df name="tools">
         <df name="System">
         </df>
       </df>
+      <in>config.h</in>
     </df>
     <df root="." name="1">
       <df name="android">
@@ -483,40 +528,72 @@
         <df name="adr">
         </df>
         <df name="fmt">
+          <df name=".libs">
+          </df>
           <df name="code">
+            <df name=".libs">
+            </df>
           </df>
           <df name="hex">
+            <df name=".libs">
+            </df>
           </df>
           <df name="natv">
+            <df name=".libs">
+            </df>
           </df>
           <df name="read_test_data">
           </df>
           <df name="spec">
+            <df name=".libs">
+            </df>
             <df name="snk">
+              <df name=".libs">
+              </df>
             </df>
           </df>
           <df name="write_test_data">
           </df>
           <df name="xml">
+            <df name=".libs">
+            </df>
             <df name="snk">
+              <df name=".libs">
+              </df>
             </df>
             <df name="src">
+              <df name=".libs">
+              </df>
             </df>
           </df>
         </df>
         <df name="item">
+          <df name=".libs">
+          </df>
         </df>
         <df name="opt">
+          <df name=".libs">
+          </df>
         </df>
         <df name="strm">
+          <df name=".libs">
+          </df>
           <df name="snk">
+            <df name=".libs">
+            </df>
           </df>
           <df name="src">
+            <df name=".libs">
+            </df>
           </df>
         </df>
         <df name="usage">
+          <df name=".libs">
+          </df>
         </df>
         <df name="util">
+          <df name=".libs">
+          </df>
         </df>
       </df>
       <df name="m4">
@@ -526,6 +603,8 @@
         </df>
       </df>
       <df name="src">
+        <df name=".libs">
+        </df>
       </df>
       <df name="tools">
         <df name="System">
