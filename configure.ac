@@ -55,12 +55,12 @@ esac
 AC_CHECK_HEADERS([obstack.h], [found_obstack_headers=yes; break;])
 AM_CONDITIONAL(ADD_OBSTACK, [test x$found_obstack_headers != xyes])
 
-AM_CONDITIONAL([MINGW_FIX], [test "x$target_os" = xmingw])
-AM_COND_IF([MINGW_FIX],
-[AC_MSG_RESULT([configure: MinGW Strings])
-AC_DEFINE(snprintf, __mingw_printf , mingw uses its own snprintf function)
-AC_DEFINE( __USE_MINGW_ANSI_STDIO , 0 , disablevsnprintf in various headers)
-])
+#AM_CONDITIONAL([MINGW_FIX], [test "x$target_os" = xmingw])
+#AM_COND_IF([MINGW_FIX],
+#[AC_MSG_RESULT([configure: MinGW Strings])
+#AC_DEFINE(snprintf, __mingw_printf , mingw uses its own snprintf function)
+#AC_DEFINE( __USE_MINGW_ANSI_STDIO , 0 , disablevsnprintf in various headers)
+#])
 
 AC_HEADER_STDC
 AC_CHECK_FUNC([bcopy],AC_DEFINE([HAVE_BCOPY], [], [ mingw32has no poix bcopy use memcopy instead]) ,)
