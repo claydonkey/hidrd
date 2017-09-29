@@ -88,7 +88,7 @@ hidrd_fd_read_whole(int fd, void **pbuf, size_t *psize)
 
     if (psize != NULL)
         *psize = size;
-    fprintf(stderr, "fd.c Failed to read input: %s\n", strerror(errno));
+   // fprintf(stderr, "fd.c Failed to read input: %s\n", strerror(errno));
     result = true;
 
 cleanup:
