@@ -231,7 +231,7 @@ cleanup:
     return result;
 }
 
-static int stop = 1;
+static int stop = 0;
 static int check = 0;
 
 JNIEXPORT jstring JNICALL Java_com_claydonkey_hidrd_FilePicker_convertXMLtoCode

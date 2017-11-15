@@ -1,12 +1,17 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
+#ifdef LIBXML_ICU_ENABLED
+  #undef LIBXML_ICU_ENABLED
+#endif
+
 /* Define android */
 #undef HAVE_ANDROID
 
 /* Caution mingw32 will have no overflow protection */
 #undef HAVE_ASPRINTF
 
-/* mingw32has no poix bcopy use memcopy instead */
+/* mingw32 has no posix bcopy use memcopy instead. Android libc++ has moved
+   this to a macro in NDK r11 */
 #undef HAVE_BCOPY
 
 /* Define to 1 if you have the declaration of `xmlStructuredErrorContext', and
@@ -82,19 +87,20 @@
 /* Version number of package */
 #undef VERSION
 
-/* mingw uses its own snprintf function */
-#undef snprintf
-
 
 /* Temporary fix to allow Mingw32 to compile
 *   @author Anthony Campbell <contact@claydonkey.com>
 *   Android is Assumed to be Cross compilation and as such will not test for bcopy locally
 */
-#if  !defined(HAVE_BCOPY) && !defined(HAVE_ANDROID)
-#define bcopy(s1, s2, n) memcpy((s2), (s1), (n))
+#if  !defined(HAVE_BCOPY)
+    #if defined(HAVE_ANDROID)
+      #define bcopy(b1, b2, len) (void)(__builtin_memmove((b2), (b1), (len)))
+    #else
+      #define bcopy(s1, s2, n) memcpy((s2), (s1), (n))
+    #endif
 #endif
 #if  !defined(HAVE_ASPRINTF)
-#define asprintf(strp,fmt,...) sprintf(*strp,fmt,__VA_ARGS__)
-#define vasprintf(strp,fmt,va_list ) vsprintf(*strp,fmt,va_list )
+  #define asprintf(strp,fmt,...) sprintf(*strp,fmt,__VA_ARGS__)
+  #define vasprintf(strp,fmt,va_list ) vsprintf(*strp,fmt,va_list )
 #endif
 

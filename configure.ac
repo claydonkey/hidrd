@@ -31,26 +31,19 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 CFLAGS=$CFLAGS
 # To have empty CFLAGS instead of undefined and '-g -O2' by default
 
-target_os=`uname -s`
+build_os=`uname -s`
+target_os=$target
 
-AC_MSG_RESULT([configuring for $target_os])
+AC_MSG_RESULT([building on ${build_os}])
 
-case "$target_os" in
-    MINGW* | cygwin* | msys* | mingw* | cegcc*)
-        CFLAGS="-g   -O2 -Wno-format   -Wall -Wextra  -DHAVE_CONFIG_H $CFLAGS"
-        LDFLAGS="$LDFLAGS -Wl,--no-undefined"
-        target_os=mingw
-    ;;
-    ANDROID*)
-        target_os=android
-        CFLAGS="-Os -fPIE  -Wall -Wextra -DHAVE_CONFIG_H $CFLAGS"
-        LDFLAGS="$LDFLAGS -pie"
-    ;;
-        *)
-        target_os=linux
-        CFLAGS="-Os -Wall -Wextra -Werror -DHAVE_CONFIG_H $CFLAGS"
-    ;;
-esac
+AM_CONDITIONAL([TARGET_OS], [test "x$target_os"  != ""])
+
+AC_MSG_RESULT([target os: ${target_os}])
+
+AC_SEARCH_LIBS([dlopen], [dl dld], [], [
+  AC_MSG_ERROR([unable to find the dlopen() function])
+])
+
 
 AC_CHECK_HEADERS([obstack.h], [found_obstack_headers=yes; break;])
 AM_CONDITIONAL(ADD_OBSTACK, [test x$found_obstack_headers != xyes])
@@ -63,7 +56,7 @@ AM_CONDITIONAL(ADD_OBSTACK, [test x$found_obstack_headers != xyes])
 #])
 
 AC_HEADER_STDC
-AC_CHECK_FUNC([bcopy],AC_DEFINE([HAVE_BCOPY], [], [ mingw32has no poix bcopy use memcopy instead]) ,)
+
 
 AC_MSG_CHECKING(whether program_invocation_short_name is defined)
 AC_TRY_COMPILE([#include <argp.h>],
@@ -86,12 +79,16 @@ AH_BOTTOM([
 *   @author Anthony Campbell <contact@claydonkey.com>
 *   Android is Assumed to be Cross compilation and as such will not test for bcopy locally
 */
-#if  !defined(HAVE_BCOPY) && !defined(HAVE_ANDROID)
-#define bcopy(s1, s2, n) memcpy((s2), (s1), (n))
+#if  !defined(HAVE_BCOPY)
+    #if defined(HAVE_ANDROID)
+      #define bcopy(b1, b2, len) (void)(__builtin_memmove((b2), (b1), (len)))
+    #else
+      #define bcopy(s1, s2, n) memcpy((s2), (s1), (n))
+    #endif
 #endif
 #if  !defined(HAVE_ASPRINTF)
-#define asprintf(strp,fmt,...) sprintf(*strp,fmt,__VA_ARGS__)
-#define vasprintf(strp,fmt,va_list ) vsprintf(*strp,fmt,va_list )
+  #define asprintf(strp,fmt,...) sprintf(*strp,fmt,__VA_ARGS__)
+  #define vasprintf(strp,fmt,va_list ) vsprintf(*strp,fmt,va_list )
 #endif
 ])
 #
@@ -101,7 +98,24 @@ AC_PROG_CC
 AC_PROG_INSTALL
 m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 
+
 LT_INIT(shared static [win32-dll])
+AM_COND_IF([TARGET_OS],,  [case "$build_os" in  MINGW* | MSYS* | cygwin* | msys* | mingw* | cegcc*) target_os=mingw ;;  esac])
+
+case "$target_os" in
+    MINGW* | cygwin* | msys* | mingw* | cegcc*)
+        CFLAGS="-g   -O2 -Wno-format   -Wall -Wextra  -DHAVE_CONFIG_H $CFLAGS"
+        LDFLAGS="$LDFLAGS -Wl,--no-undefined"
+    ;;
+    *android* | ANDROID*)
+        CFLAGS="-O3 -fPIE  -Wall -Wextra -DHAVE_CONFIG_H $CFLAGS"
+        LDFLAGS="$LDFLAGS -pie -llog"
+    ;;
+        *)
+        CFLAGS="-O3 -Wall -Wextra -Werror -DHAVE_CONFIG_H $CFLAGS"
+    ;;
+esac
+
 #
 # Checks for libraries.
 #
@@ -131,7 +145,8 @@ fi
 AC_SUBST(LIBXML2_LIBS)
 AC_SUBST(LIBXML2_CFLAGS)
 
-
+AC_MSG_RESULT([libxml libs: ${LIBXML2_LIBS}])
+AC_MSG_RESULT([libxml cflags: ${LIBXML2_CFLAGS}])
 
 #
 # Checks for features
@@ -218,18 +233,17 @@ case $host_os in
 esac
 
 
-#AC_ARG_ENABLE(
- #android,
- #AS_HELP_STRING([--disable-android], [disable android native interop demo]),
- #[], [enable_android=$enable_android])
-
 if test "$enable_android" == "yes"; then
-  AC_MSG_WARN([android  library is enabled])
-   AC_DEFINE(HAVE_ANDROID,1,[Define android])
+  AC_MSG_NOTICE([android  library is enabled])
+  AC_DEFINE(HAVE_ANDROID,1,[Define android])
 fi
 
 #check for asprintf and vasprintf
 AC_CHECK_FUNC([asprintf],AC_DEFINE([HAVE_ASPRINTF], [], [Caution mingw32 will have no overflow protection]) ,)
+
+AC_CHECK_FUNC([bcopy],AC_DEFINE([HAVE_BCOPY], [], [mingw32 has no posix bcopy use memcopy instead.
+ Android libc++ has moved this to a macro in NDK r11]) ,)
+
 
 # Check for stream library dependencies
 if test "$enable_streams" = "yes"; then
@@ -295,9 +309,6 @@ if test "$enable_hidrd_convert" = "yes"; then
 fi
 
 
-
-
-
 # Output features to automake
 AM_CONDITIONAL([ENABLE_TESTS_INSTALL], [test "$enable_tests_install" = "yes"])
 AM_CONDITIONAL([ENABLE_OPT], [test "$enable_opt" = "yes"])
@@ -310,6 +321,11 @@ AM_CONDITIONAL([ENABLE_NAMES], [test "$enable_names" = "yes"])
 AM_CONDITIONAL([ENABLE_FMT_XML], [test "$enable_xml_format" = "yes"])
 AM_CONDITIONAL([ENABLE_FMT_SPEC], [test "$enable_spec_format" = "yes"])
 AM_CONDITIONAL([ENABLE_FMT_CODE], [test "$enable_code_format" = "yes"])
+
+# Remove Unicode reference for android
+AM_CONDITIONAL(AH_VERBATIM([ENABLED_LIBXML_ICU], [#ifdef LIBXML_ICU_ENABLED
+  #undef LIBXML_ICU_ENABLED
+#endif]),[test "$enable_android" = "yes"])
 
 # Output features to preprocessor and compiler
 if test "$enable_debug" = "yes"; then

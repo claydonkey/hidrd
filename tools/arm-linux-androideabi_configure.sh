@@ -1,24 +1,13 @@
 #!/bin/sh
 
-if [[ $# -eq 0 ]] ; then
-    echo 'please provide prefix=<YOUR_TOOLCHAIN>'
-    exit 0
-fi
+echo running: "$0"
 
-case "$1" in
-    PREFIX=/android64) echo 'welcome home:' "$1" ;;
-    *) echo 'your prefix is: ' "$1" ;;
-esac
-
-
-SDIR=$(dirname $0)
-export CROSS_COMPILE=aarch64-linux-android
-#prefix
-export  "$1"
+export CROSS_COMPILE=arm-linux-androideabi
+export PREFIX=/arm-linux-androideabi
 export PATH=${PREFIX}/bin:${PATH}
 # Apparently android-8 works fine, there are other versions, look them up
 export SYSROOT=${PREFIX}/sysroot/usr
-export CFLAGS="-fPIE -I${ANDROID_PREFIX}/include/python2.7 -DHAVE_IEEEFP_H=0 -DHAVE_SSIZE_T -DPY_FORMAT_SIZE_T=l -DPY_FORMAT_LONG_LONG=ll"
+export CFLAGS="-fPIE -pie -I${ANDROID_PREFIX}/include/python2.7 -DHAVE_IEEEFP_H=0 -DHAVE_SSIZE_T -DPY_FORMAT_SIZE_T=l -DPY_FORMAT_LONG_LONG=ll"
 export CROSS_PATH=${PREFIX}/bin/${CROSS_COMPILE}
 export PYTHON_INCLUDES=${PREFIX}/include/python2.7
 export PYTHON_LIBS="-L${PREFIX}/lib/python2.7 -L${PREFIX}/lib"
@@ -48,8 +37,6 @@ export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
 # Note that this was only required to build boehm-gc with dynamic linking support.
 export CFLAGS="${CFLAGS} --sysroot=${SYSROOT} -I${SYSROOT}/include -I${PREFIX}/include"
 export CPPFLAGS="${CFLAGS}"
-export LDFLAGS="${LDFLAGS} -L${SYSROOT}/lib -L${PREFIX}/lib"
+export LDFLAGS="${LDFLAGS}  -L${SYSROOT}/lib -L${PREFIX}/lib "
 
-echo  "configure  --host=${CROSS_COMPILE} --prefix=${PREFIX} --build=x86_64-pc-linux-gnu --enable-android  --enable-debug "$2""
-
-./$SDIR/../configure  --without-python $* --host=${CROSS_COMPILE} --with-sysroot=${SYSROOT} --prefix=${PREFIX} "$@"  --build=x86_64-pc-linux-gnu   --enable-android  $2
+./configure    $*  --target=${CROSS_COMPILE}  --host=${CROSS_COMPILE} --with-sysroot=${SYSROOT} --prefix=${PREFIX} "$@"  --build=x86_64-pc-linux-gnu

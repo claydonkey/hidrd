@@ -6,7 +6,7 @@
             <name>hidrd-master</name>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions>h,txt</header-extensions>
+            <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
@@ -14,15 +14,31 @@
             </sourceRootList>
             <confList>
                 <confElem>
-                    <name>MinGW64</name>
+                    <name>x86_64-w64-mingw32</name>
                     <type>0</type>
                 </confElem>
                 <confElem>
-                    <name>Android64</name>
+                    <name>aarch64-linux-android</name>
                     <type>0</type>
                 </confElem>
                 <confElem>
-                    <name>Android64_executable</name>
+                    <name>aarch64-linux-android_executable</name>
+                    <type>0</type>
+                </confElem>
+                <confElem>
+                    <name>arm-linux-androideabi</name>
+                    <type>0</type>
+                </confElem>
+                <confElem>
+                    <name>arm-linux-androideab_executable</name>
+                    <type>0</type>
+                </confElem>
+                <confElem>
+                    <name>arm-linux-androideabi-clang</name>
+                    <type>0</type>
+                </confElem>
+                <confElem>
+                    <name>arm-linux-androideab_executable-clang</name>
                     <type>0</type>
                 </confElem>
             </confList>
