@@ -23,7 +23,13 @@ dist_noinst_SCRIPTS = bootstrap distcheck-all
 ACLOCAL_AMFLAGS = -I m4/autoconf
 
 if ENABLE_ADR
-all-local:
+install-exec-am:
 	@echo "Copying Libraries to android directory"
-	@$(srcdir)/tools/copyToJNI.sh
+	@cp ${DESTDIR}/${bindir}/hidrd-convert ${srcdir}/hidrd-android/app/src/main/jniLibs/arm64-v8a/libhidrd-convert.so
+	@cp ${DESTDIR}/${libdir}/*.so ${srcdir}/hidrd-android/app/src/main/jniLibs/arm64-v8a
+	@cp ${DESTDIR}/${datadir}/xml/schema/hidrd.xsd ${srcdir}/hidrd-android/app/src/main/jniLibs/arm64-v8a/libhidrd.xsd.so
+	@cp  ${srcdir}/src/mouse_descriptor.xml ${srcdir}/hidrd-android/app/src/main/jniLibs/arm64-v8a/libmouse_descriptor.xml.so
+	@cp  ${srcdir}/src/mouse_descriptor.code ${srcdir}/hidrd-android/app/src/main/jniLibs/arm64-v8a/libmouse_descriptor.code.so
+	@cp  ${srcdir}/src/mouse_descriptor.hex ${srcdir}/hidrd-android/app/src/main/jniLibs/arm64-v8a/libmouse_descriptor.hex.so
+	@cp  ${srcdir}/src/*.so ${srcdir}/hidrd-android/app/src/main/jniLibs/arm64-v8a
 endif

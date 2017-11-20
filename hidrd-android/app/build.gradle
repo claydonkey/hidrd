@@ -1,12 +1,23 @@
 apply plugin: 'com.android.application'
-android {
-    compileSdkVersion 21
-    buildToolsVersion "26.0.2"
 
+android {
+    compileSdkVersion 24
     defaultConfig {
         applicationId "com.claydonkey.hidrd"
-        minSdkVersion 5
-        targetSdkVersion 17
+        minSdkVersion 24
+        targetSdkVersion 24
+        multiDexEnabled true
+   /*     flavorDimensions "demo", "full" */
+    }
+
+    splits{
+        abi {
+            enable true
+            reset()
+            include  'arm64-v8a' //select ABIs to build APKs for
+            universalApk true //generate an additional APK that contains all the ABIs
+        }
+
     }
 
     buildTypes {
@@ -18,8 +29,39 @@ android {
             debuggable true
             jniDebuggable true
         }
-    }
-}
 
+    }
+    externalNativeBuild {
+        cmake {
+            path 'CMakeLists.txt'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['/../../build/aarch64-linux-android-clang/dist/arm64-v8a/lib']
+        }
+    }
+
+    buildToolsVersion '26.0.2'
+/*    productFlavors {
+        demo {
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+            dimension "demo"
+            minSdkVersion 24
+            applicationId 'com.claydonkey.hidrd'
+            targetSdkVersion 24
+        }
+        full {
+            applicationIdSuffix ".full"
+            versionNameSuffix "-full"
+            dimension "full"
+            minSdkVersion 24
+            applicationId 'com.claydonkey.hidrd'
+            targetSdkVersion 24
+        }
+    }*/
+}
 dependencies {
 }

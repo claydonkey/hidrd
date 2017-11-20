@@ -38,7 +38,6 @@ AC_MSG_RESULT([building on ${build_os}])
 
 AM_CONDITIONAL([TARGET_OS], [test "x$target_os"  != ""])
 
-AC_MSG_RESULT([target os: ${target_os}])
 
 AC_SEARCH_LIBS([dlopen], [dl dld], [], [
   AC_MSG_ERROR([unable to find the dlopen() function])
@@ -83,7 +82,7 @@ AH_BOTTOM([
     #if defined(HAVE_ANDROID)
       #define bcopy(b1, b2, len) (void)(__builtin_memmove((b2), (b1), (len)))
     #else
-      #define bcopy(s1, s2, n) memcpy((s2), (s1), (n))
+      #define bcopy(b1, b2, len) memcpy(b2, b1, len)
     #endif
 #endif
 #if  !defined(HAVE_ASPRINTF)
@@ -104,17 +103,23 @@ AM_COND_IF([TARGET_OS],,  [case "$build_os" in  MINGW* | MSYS* | cygwin* | msys*
 
 case "$target_os" in
     MINGW* | cygwin* | msys* | mingw* | cegcc*)
-        CFLAGS="-g   -O2 -Wno-format   -Wall -Wextra  -DHAVE_CONFIG_H $CFLAGS"
+        CFLAGS="-Wno-format  -Wall -Wextra  -DHAVE_CONFIG_H -static  $CFLAGS"
         LDFLAGS="$LDFLAGS -Wl,--no-undefined"
+       AC_MSG_RESULT([configure: Flags for MINGW MSYS CYGWIN])
     ;;
-    *android* | ANDROID*)
-        CFLAGS="-O3 -fPIE  -Wall -Wextra -DHAVE_CONFIG_H $CFLAGS"
+    *android* | *ANDROID*)
+        CFLAGS="-fPIE -fPIC -Wall -Wextra -DHAVE_CONFIG_H $CFLAGS"
         LDFLAGS="$LDFLAGS -pie -llog"
+       AC_MSG_RESULT([configure: Flags for ANDROID])
     ;;
         *)
-        CFLAGS="-O3 -Wall -Wextra -Werror -DHAVE_CONFIG_H $CFLAGS"
+        CFLAGS="-Wall -Wextra -Werror -DHAVE_CONFIG_H $CFLAGS"
+       AC_MSG_RESULT([configure: Flags for GENERIC LINUX])
     ;;
 esac
+
+
+AC_MSG_RESULT([target os: ${target_os}])
 
 #
 # Checks for libraries.
@@ -218,10 +223,7 @@ AC_ARG_ENABLE(
 AC_CANONICAL_HOST
 
 case $host_os in
-     linux-androideabi)
-        enable_android=yes
-        ;;
-     linux-android)
+     *android*)
         enable_android=yes
         ;;
      '')
@@ -234,7 +236,7 @@ esac
 
 
 if test "$enable_android" == "yes"; then
-  AC_MSG_NOTICE([android  library is enabled])
+  AC_MSG_NOTICE([ANDROID is enabled])
   AC_DEFINE(HAVE_ANDROID,1,[Define android])
 fi
 
@@ -323,7 +325,7 @@ AM_CONDITIONAL([ENABLE_FMT_SPEC], [test "$enable_spec_format" = "yes"])
 AM_CONDITIONAL([ENABLE_FMT_CODE], [test "$enable_code_format" = "yes"])
 
 # Remove Unicode reference for android
-AM_CONDITIONAL(AH_VERBATIM([ENABLED_LIBXML_ICU], [#ifdef LIBXML_ICU_ENABLED
+#AM_CONDITIONAL(AH_VERBATIM([ENABLED_LIBXML_ICU], [#ifdef LIBXML_ICU_ENABLED
   #undef LIBXML_ICU_ENABLED
 #endif]),[test "$enable_android" = "yes"])
 

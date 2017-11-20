@@ -23,3 +23,6 @@ Makefile
 /hidrd-android-gradle/app/build/
 /hidrd-android/app/build/
 /hidrd-android/build/
+/hidrd-android/app/release/
+/auxdir/
+/build/

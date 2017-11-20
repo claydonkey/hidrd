@@ -146,18 +146,21 @@
         <dependencyChecking>false</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-O3 -O2"/>
+      </flagsDictionary>
       <codeAssistance>
       </codeAssistance>
       <makefileType>
         <makeTool>
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
-          <buildCommand>${MAKE} -f Makefile CFLAGS=-w -Wno-error</buildCommand>
+          <buildCommand>${MAKE} -f Makefile  </buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
           <executablePath>src\.libs\hidrd-convert.exe</executablePath>
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
-          <preBuildCommand>bash ./configure CC=${IDE_CC} CXX=${IDE_CXX} CFLAGS="-g3 -gdwarf-2" CXXFLAGS="-g3 -gdwarf-2"</preBuildCommand>
+          <preBuildCommand>bash ./tools/x86_64-pc-mingw32.sh CC=${IDE_CC} CXX=${IDE_CXX} CFLAGS="-g3 -O2 -w -Wno-error"</preBuildCommand>
         </preBuild>
       </makefileType>
       <folder path="0/lib/fmt/code">
@@ -313,7 +316,7 @@
       </folder>
       <item path="lib/adr/adr.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/fmt/code.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/code.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt</pElem>
@@ -328,9 +331,9 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/fmt/code/snk.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/code/snk.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/hex.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/hex.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt</pElem>
@@ -345,11 +348,11 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/fmt/hex/snk.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/hex/snk.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/hex/src.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/hex/src.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/inst.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/inst.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt</pElem>
@@ -364,7 +367,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/fmt/list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/list.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt</pElem>
@@ -379,7 +382,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/fmt/natv.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/natv.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt</pElem>
@@ -394,15 +397,15 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/fmt/natv/snk.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/natv/snk.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/natv/src.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/natv/src.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/fmt/natv_test.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/fmt/read.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/fmt/spec.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt</pElem>
@@ -417,7 +420,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/fmt/spec/snk.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt/spec</pElem>
@@ -426,17 +429,17 @@
           </incDir>
         </cTool>
       </item>
-      <item path="lib/fmt/spec/snk/ent.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk/ent.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/spec/snk/ent_list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk/ent_list.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/spec/snk/item.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk/item.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/spec/snk/item_ent.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk/item_ent.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/fmt/write.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/fmt/xml.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt</pElem>
@@ -451,7 +454,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/fmt/xml/snk.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt/xml</pElem>
@@ -461,15 +464,15 @@
           </incDir>
         </cTool>
       </item>
-      <item path="lib/fmt/xml/snk/element.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk/element.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/snk/element_break.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk/element_break.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/snk/group.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk/group.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/snk/item.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk/item.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/src.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/src.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/fmt/xml</pElem>
@@ -479,15 +482,15 @@
           </incDir>
         </cTool>
       </item>
-      <item path="lib/fmt/xml/src/element.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/src/element.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/src/element_bitmap.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/src/element_bitmap.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/src/element_unit.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/src/element_unit.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/fmt/xml_test.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/item/any.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/item/any.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/item</pElem>
@@ -503,7 +506,7 @@
       </item>
       <item path="lib/item/any_test.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/item/basic.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/item/basic.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/item</pElem>
@@ -517,7 +520,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/item/collection.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/item/collection.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/item</pElem>
@@ -531,7 +534,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/item/global.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/item/global.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/item</pElem>
@@ -545,7 +548,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/item/local.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/item/local.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/item</pElem>
@@ -559,7 +562,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/item/long.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/item/long.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/item</pElem>
@@ -573,7 +576,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/item/main.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/item/main.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/item</pElem>
@@ -587,7 +590,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/item/pfx.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/item/pfx.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/item</pElem>
@@ -601,7 +604,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/item/short.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/item/short.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/item</pElem>
@@ -615,7 +618,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/opt/inst.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/inst.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -629,7 +632,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/opt/list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/list.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -643,7 +646,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/opt/name_tkn.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/name_tkn.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -657,7 +660,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/opt/spec.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/spec.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -671,7 +674,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/opt/spec_list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/spec_list.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -687,7 +690,7 @@
       </item>
       <item path="lib/opt/test.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/opt/tkn.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/tkn.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -701,7 +704,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/opt/tkns.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/tkns.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -715,7 +718,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/opt/tkns_list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/tkns_list.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -729,7 +732,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/opt/type.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/type.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -743,7 +746,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/opt/value_tkn.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/value_tkn.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/opt</pElem>
@@ -757,31 +760,47 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/strm/snk/inst.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/strm/snk/inst.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/strm/snk/type.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/strm/snk/type.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/strm/src/inst.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/strm/src/inst.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/strm/src/type.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/strm/src/type.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/usage/all.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/usage/all.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/usage/id.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/usage/id.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/usage/id_desc.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/usage/id_desc.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/usage/id_desc_list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/usage/id_desc_list.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/usage/page.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/usage/page.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/usage/page_desc.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/usage/page_desc.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/usage/page_desc_list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/usage/page_desc_list.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/usage/type.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/usage/type.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/util/bool.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/util/bool.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
+      </item>
+      <item path="lib/util/buf.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/util</pElem>
@@ -795,7 +814,7 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/util/buf.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/util/char.c" ex="false" tool="0" flavor2="3">
         <cTool>
           <incDir>
             <pElem>lib/util</pElem>
@@ -809,165 +828,171 @@
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/util/char.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/dec.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/util/dec.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/fd.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/util/fd.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/fmt.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/util/fmt.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/hex.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/util/hex.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/num.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
-            <Elem>_GNU_SOURCE</Elem>
-          </preprocessorList>
-        </cTool>
-      </item>
-      <item path="lib/util/num.c" ex="false" tool="0" flavor2="2">
-        <cTool>
-          <incDir>
-            <pElem>lib/util</pElem>
-            <pElem></pElem>
-            <pElem>include</pElem>
-          </incDir>
-          <preprocessorList>
-            <Elem>HAVE_CONFIG_H</Elem>
-            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
       <item path="lib/util/num_test.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/util/obstack.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/obstack.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/util/str.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/str.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/util/tkn.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/tkn.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
-      <item path="lib/util/ttbl.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/ttbl.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
       <item path="lib/util/ttbl_test.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/util/unit.c" ex="false" tool="0" flavor2="2">
-        <cTool>
+      <item path="lib/util/unit.c" ex="false" tool="0" flavor2="3">
+        <cTool flags="0">
           <incDir>
             <pElem>lib/util</pElem>
             <pElem></pElem>
             <pElem>include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>DLL_EXPORT</Elem>
             <Elem>HAVE_CONFIG_H</Elem>
             <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
             <Elem>_GNU_SOURCE</Elem>
           </preprocessorList>
         </cTool>
       </item>
-      <item path="src/hidrd-convert.c" ex="false" tool="0" flavor2="2">
+      <item path="src/hidrd-convert.c" ex="false" tool="0" flavor2="3">
       </item>
     </conf>
     <conf name="aarch64-linux-android" type="0">
@@ -1671,7 +1696,8 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <flagsDictionary>
-        <element flagsID="0" commonFlags="-mbionic -g -ggdb -g -ggdb -g -Os -fPIC"/>
+        <element flagsID="0" commonFlags="-O3 -fPIC"/>
+        <element flagsID="1" commonFlags="-mbionic -g -ggdb -g -ggdb -g -Os -fPIC"/>
       </flagsDictionary>
       <codeAssistance>
       </codeAssistance>
@@ -1684,11 +1710,9 @@
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
-          <preBuildCommand>./configure --target=arm-linux-androideabi  --host=arm-linux-androideabi --with-sysroot=/arm-linux-androideabi/sysroot/usr --prefix=/arm-linux-androideabi --build=x86_64-pc-linux-gnu</preBuildCommand>
+          <preBuildCommand>bash ./arm-linux-androideabi_configure.sh</preBuildCommand>
         </preBuild>
       </makefileType>
-      <item path="bootstrap" ex="false" tool="3" flavor2="0">
-      </item>
       <folder path="0/lib/fmt/natv">
         <cTool>
           <incDir>
@@ -1733,7 +1757,7 @@
       <item path="lib/fmt/hex.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/fmt/hex/snk.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/util</pElem>
             <pElem>include/hidrd/item</pElem>
@@ -1747,7 +1771,7 @@
         </cTool>
       </item>
       <item path="lib/fmt/hex/src.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/item</pElem>
             <pElem>include/hidrd/usage</pElem>
@@ -1766,7 +1790,7 @@
       <item path="lib/fmt/natv.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/fmt/natv/snk.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/strm/snk</pElem>
             <pElem>include/hidrd/fmt/natv</pElem>
@@ -1776,7 +1800,7 @@
         </cTool>
       </item>
       <item path="lib/fmt/natv/src.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/strm/src</pElem>
             <pElem>include/hidrd/fmt/natv</pElem>
@@ -1792,7 +1816,7 @@
       <item path="lib/fmt/spec.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/fmt/spec/snk.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/item</pElem>
             <pElem>include/hidrd/usage</pElem>
@@ -1830,7 +1854,7 @@
       <item path="lib/fmt/xml/src.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/fmt/xml/src/element.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/item/pfx</pElem>
             <pElem>include/hidrd/item</pElem>
@@ -1849,7 +1873,7 @@
       <item path="lib/fmt/xml/src/element_bitmap.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/fmt/xml/src/element_unit.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/item/pfx</pElem>
             <pElem>include/hidrd/item</pElem>
@@ -1910,23 +1934,23 @@
       <item path="lib/opt/value_tkn.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/strm/snk/inst.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
       <item path="lib/strm/snk/type.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
       <item path="lib/strm/src/inst.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
       <item path="lib/strm/src/type.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
         </cTool>
       </item>
       <item path="lib/usage/all.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/usage</pElem>
             <pElem>include/hidrd/util</pElem>
@@ -1940,7 +1964,7 @@
       <item path="lib/usage/id_desc.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/usage/id_desc_list.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/usage</pElem>
             <pElem>include</pElem>
@@ -1949,7 +1973,7 @@
         </cTool>
       </item>
       <item path="lib/usage/page.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/util</pElem>
             <pElem>include/hidrd/usage</pElem>
@@ -1961,7 +1985,7 @@
       <item path="lib/usage/page_desc.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/usage/page_desc_list.c" ex="false" tool="0" flavor2="2">
-        <cTool flags="0">
+        <cTool flags="1">
           <incDir>
             <pElem>include/hidrd/usage</pElem>
             <pElem>include/hidrd/util</pElem>
@@ -1973,34 +1997,177 @@
       <item path="lib/usage/type.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/util/bool.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/buf.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/util/char.c" ex="false" tool="0" flavor2="2">
       </item>
       <item path="lib/util/dec.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/fd.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/fmt.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/hex.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/num.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/num_test.c" ex="false" tool="0" flavor2="9">
       </item>
       <item path="lib/util/obstack.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/str.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/tkn.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/ttbl.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="lib/util/ttbl_test.c" ex="false" tool="0" flavor2="9">
       </item>
       <item path="lib/util/unit.c" ex="false" tool="0" flavor2="2">
+        <cTool flags="0">
+          <incDir>
+            <pElem>lib/util</pElem>
+            <pElem></pElem>
+            <pElem>include</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>HAVE_CONFIG_H</Elem>
+            <Elem>NDEBUG</Elem>
+            <Elem>PIC</Elem>
+            <Elem>_GNU_SOURCE</Elem>
+          </preprocessorList>
+        </cTool>
       </item>
       <item path="src/hidrd-convert.c" ex="false" tool="0" flavor2="2">
       </item>
@@ -2025,7 +2192,7 @@
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
-          <preBuildCommand>bash ./configure --target=arm-linux-androideabi  --host=arm-linux-androideabi --with-sysroot=/arm-linux-androideabi/sysroot/usr --prefix=/arm-linux-androideabi --build=x86_64-pc-linux-gnu CC=${IDE_CC} CXX=${IDE_CXX}  CFLAGS="${CFLAGS} --sysroot=/arm-linux-androideabi/sysroot/usr -I/arm-linux-androideabi/sysroot/usr/include -I/arm-linux-androideabi/include"</preBuildCommand>
+          <preBuildCommand>bash ./arm-linux-androideabi_configure.sh</preBuildCommand>
         </preBuild>
       </makefileType>
       <folder path="0/lib/fmt/natv">
@@ -2378,7 +2545,7 @@
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
-          <preBuildCommand>./configure --target=arm-linux-androideabi  --host=arm-linux-androideabi --with-sysroot=/arm-linux-androideabi/sysroot/usr --prefix=/arm-linux-androideabi --build=x86_64-pc-linux-gnu</preBuildCommand>
+          <preBuildCommand>bash ./tools/aarch64-linux-android-clang_configure.sh</preBuildCommand>
         </preBuild>
       </makefileType>
       <folder path="0/lib/fmt/natv">
@@ -2418,11 +2585,11 @@
       </folder>
       <item path="lib/adr/adr.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/fmt/code.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/code.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/code/snk.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/code/snk.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/hex.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/hex.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/fmt/hex/snk.c" ex="false" tool="0" flavor2="2">
         <cTool flags="0">
@@ -2451,11 +2618,11 @@
           </incDir>
         </cTool>
       </item>
-      <item path="lib/fmt/inst.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/inst.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/list.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/natv.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/natv.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/fmt/natv/snk.c" ex="false" tool="0" flavor2="2">
         <cTool flags="0">
@@ -2481,9 +2648,9 @@
       </item>
       <item path="lib/fmt/read.c" ex="false" tool="0" flavor2="9">
       </item>
-      <item path="lib/fmt/spec.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/spec/snk.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk.c" ex="false" tool="0" flavor2="3">
         <cTool flags="0">
           <incDir>
             <pElem>include/hidrd/item</pElem>
@@ -2497,31 +2664,31 @@
           </incDir>
         </cTool>
       </item>
-      <item path="lib/fmt/spec/snk/ent.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk/ent.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/spec/snk/ent_list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk/ent_list.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/spec/snk/item.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk/item.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/spec/snk/item_ent.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/spec/snk/item_ent.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/fmt/write.c" ex="false" tool="0" flavor2="9">
       </item>
-      <item path="lib/fmt/xml.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/snk.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/snk/element.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk/element.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/snk/element_break.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk/element_break.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/snk/group.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk/group.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/snk/item.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/snk/item.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/src.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/src.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/src/element.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/src/element.c" ex="false" tool="0" flavor2="3">
         <cTool flags="0">
           <incDir>
             <pElem>include/hidrd/item/pfx</pElem>
@@ -2538,9 +2705,9 @@
           </incDir>
         </cTool>
       </item>
-      <item path="lib/fmt/xml/src/element_bitmap.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/src/element_bitmap.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/fmt/xml/src/element_unit.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/fmt/xml/src/element_unit.c" ex="false" tool="0" flavor2="3">
         <cTool flags="0">
           <incDir>
             <pElem>include/hidrd/item/pfx</pElem>
@@ -2583,7 +2750,7 @@
       </item>
       <item path="lib/opt/list.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/opt/name_tkn.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/name_tkn.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/opt/spec.c" ex="false" tool="0" flavor2="2">
       </item>
@@ -2593,13 +2760,13 @@
       </item>
       <item path="lib/opt/tkn.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/opt/tkns.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/tkns.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/opt/tkns_list.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/tkns_list.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/opt/type.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/opt/value_tkn.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/opt/value_tkn.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/strm/snk/inst.c" ex="false" tool="0" flavor2="2">
         <cTool flags="0">
@@ -2629,7 +2796,7 @@
       </item>
       <item path="lib/usage/id.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/usage/id_desc.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/usage/id_desc.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/usage/id_desc_list.c" ex="false" tool="0" flavor2="2">
         <cTool flags="0">
@@ -2664,17 +2831,17 @@
       </item>
       <item path="lib/usage/type.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/util/bool.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/util/bool.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/util/buf.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/util/char.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/util/char.c" ex="false" tool="0" flavor2="3">
       </item>
-      <item path="lib/util/dec.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/util/dec.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/util/fd.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="lib/util/fmt.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/util/fmt.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/util/hex.c" ex="false" tool="0" flavor2="2">
       </item>
@@ -2682,7 +2849,7 @@
       </item>
       <item path="lib/util/num_test.c" ex="false" tool="0" flavor2="9">
       </item>
-      <item path="lib/util/obstack.c" ex="false" tool="0" flavor2="2">
+      <item path="lib/util/obstack.c" ex="false" tool="0" flavor2="3">
       </item>
       <item path="lib/util/str.c" ex="false" tool="0" flavor2="2">
       </item>
@@ -2694,7 +2861,7 @@
       </item>
       <item path="lib/util/unit.c" ex="false" tool="0" flavor2="2">
       </item>
-      <item path="src/hidrd-convert.c" ex="false" tool="0" flavor2="2">
+      <item path="src/hidrd-convert.c" ex="false" tool="0" flavor2="3">
       </item>
     </conf>
     <conf name="arm-linux-androideab_executable-clang" type="0">
@@ -2717,8 +2884,7 @@
         </makeTool>
         <preBuild>
           <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
-          <preBuildCommand>bash ./configure --target=arm-linux-androideabi  --host=arm-linux-androideabi --with-sysroot=/arm-linux-androideabi-clang/sysroot/usr --prefix=/arm-linux-androideabi-clang --build=x86_64-pc-linux-gnu CC=${IDE_CC} CXX=${IDE_CXX}  CFLAGS="${CFLAGS} --sysroot=/arm-linux-androideabi-clang/sysroot/usr -I/arm-linux-androideabi-clang/sysroot/usr/include -I/arm-linux-androideabi-clang/include"</preBuildCommand>
-          <preBuildFirst>true</preBuildFirst>
+          <preBuildCommand>bash ./tools/aarch64-linux-android-clang_configure.sh</preBuildCommand>
         </preBuild>
       </makefileType>
       <folder path="0/lib/fmt/natv">

@@ -38,6 +38,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,13 +79,10 @@ public class FilePicker extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         LayoutInflater inflator = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
         View emptyView = inflator.inflate(R.layout.empty_view, null);
         ((ViewGroup) getListView().getParent()).addView(emptyView);
         getListView().setEmptyView(emptyView);
-
         AssetManager assetManager = getAssets();
 
         Directory = getExternalFilesDir(null);
@@ -95,6 +93,7 @@ public class FilePicker extends ListActivity {
 
             }
         }
+
         Adapter = new FilePickerListAdapter(this, Files);
         setListAdapter(Adapter);
         // Initialize the extensions array to allow any file extensions
@@ -158,7 +157,8 @@ public class FilePicker extends ListActivity {
         if (newFile.isFile()) {
             Intent extra = new Intent();
             extra.putExtra(EXTRA_FILE_PATH, newFile.getAbsolutePath());
-            String result = convertXMLtoCode(newFile.getAbsolutePath(), newFile.getParent() + "/test.txt");
+            Pair<Integer, String> res;
+            String result = hidrd_Xml_Code(newFile.getAbsolutePath(), newFile.getParent() + "/test.txt");
             setResult(RESULT_OK, extra);
             finish();
         } else {
@@ -170,11 +170,9 @@ public class FilePicker extends ListActivity {
     }
 
     private class FilePickerListAdapter extends ArrayAdapter<File> {
-
         private List<File> mObjects;
 
         public FilePickerListAdapter(Context context, List<File> objects) {
-
             super(context, R.layout.list_item, android.R.id.text1, objects);
             mObjects = objects;
         }
@@ -212,19 +210,12 @@ public class FilePicker extends ListActivity {
 
         public int compare(File f1, File f2) {
 
-            if (f1 == f2) {
+            if (f1 == f2)
                 return 0;
-            }
-
             if (f1.isDirectory() && f2.isFile()) // Show directories above files
-            {
                 return -1;
-            }
-
             if (f1.isFile() && f2.isDirectory()) // Show files below directories
-            {
                 return 1;
-            }
             return f1.getName().compareToIgnoreCase(f2.getName());
         }
     }
@@ -234,7 +225,6 @@ public class FilePicker extends ListActivity {
         private String[] Extensions;
 
         public ExtensionFilenameFilter(String[] extensions) {
-
             super();
             Extensions = extensions;
         }
@@ -246,11 +236,8 @@ public class FilePicker extends ListActivity {
             }
 
             if (Extensions != null && Extensions.length > 0) {
-
                 for (int i = 0; i < Extensions.length; i++) {
-
                     if (filename.endsWith(Extensions[i])) {
-
                         // The filename ends with the extension
                         return true;
                     }
@@ -261,10 +248,11 @@ public class FilePicker extends ListActivity {
             // No extensions has been set. Accept all file extensions.
             return true;
         }
-
     }
 
-    public native String convertXMLtoCode(String inFile, String outFile);
+    public native String hidrd_Xml_Code(String inFile, String outFile);
+
+    public native Pair<Integer, String> hidrd_Xml_Code_Pair(String inFile, String outFile);
 
     /* this is used to load the library on application
      * startup. The library has already been unpacked into
@@ -272,6 +260,6 @@ public class FilePicker extends ListActivity {
      * installation time by the package manager.
      */
     static {
-        System.loadLibrary("hidrd_adr");
+        System.loadLibrary("hidrd_jni");
     }
 }

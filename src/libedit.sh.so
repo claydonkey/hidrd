@@ -1,0 +1,6 @@
+export LD_LIBRARY_PATH=/data/app/com.claydonkey.com.hidrd-1/lib/arm64
+mv libhidrd.xsd.so hidrd.xsd
+mv libhidrd-convert.so hidrd-convert
+mv libmouse_descriptor.hex.so mouse_descriptor.hex
+mv libmouse_descriptor.code.so mouse_descriptor.code
+mv libmouse_descriptor.xml.so mouse_descriptor.xml
