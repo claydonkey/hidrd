@@ -264,9 +264,10 @@ static int process(const char *input_name, const char *input_fmt_name, const cha
 JNIEXPORT jobject JNICALL Java_com_claydonkey_hidrd_FilePicker_hidrd_1Xml_1Code_1Pair
         (JNIEnv *env, jobject obj, jstring jinFile, jstring joutFile) {
     jclass cls_Pair = (jclass) (*env)->FindClass(env, "android/util/Pair");
+    jmethodID cls_PairCtor = (jclass) (*env)->GetMethodID(env, cls_Pair, "<init>", "()V");
+    jobject obj_Pair = (jclass) (*env)->NewObject(env, cls_Pair, cls_PairCtor);
 
-    return (*env)->NewObject(env, cls_Pair,);
-
+    return obj_Pair;
 }
 
 /*

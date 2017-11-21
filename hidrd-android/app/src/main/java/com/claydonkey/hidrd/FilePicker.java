@@ -156,8 +156,11 @@ public class FilePicker extends ListActivity {
 
         if (newFile.isFile()) {
             Intent extra = new Intent();
-            extra.putExtra(EXTRA_FILE_PATH, newFile.getAbsolutePath());
+            extra.putExtra(EXTRA_FILE_PATH, newfffFile.getAbsolutePath());
             Pair<Integer, String> res;
+
+            Pair<Integer, String> pair = new Pair<>(1, "e");
+
             String result = hidrd_Xml_Code(newFile.getAbsolutePath(), newFile.getParent() + "/test.txt");
             setResult(RESULT_OK, extra);
             finish();
