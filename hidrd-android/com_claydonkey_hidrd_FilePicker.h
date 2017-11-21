@@ -67,7 +67,7 @@ extern "C" {
  * Signature: (Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_com_claydonkey_hidrd_FilePicker_hidrd_1Xml_1Code
-        (JNIEnv *, jobject, jstring, jstring);
+  (JNIEnv *, jobject, jstring, jstring);
 
 /*
  * Class:     com_claydonkey_hidrd_FilePicker
@@ -75,7 +75,7 @@ JNIEXPORT jstring JNICALL Java_com_claydonkey_hidrd_FilePicker_hidrd_1Xml_1Code
  * Signature: (Ljava/lang/String;Ljava/lang/String;)Landroid/util/Pair;
  */
 JNIEXPORT jobject JNICALL Java_com_claydonkey_hidrd_FilePicker_hidrd_1Xml_1Code_1Pair
-        (JNIEnv *, jobject, jstring, jstring);
+  (JNIEnv *, jobject, jstring, jstring);
 
 /*
  * Class:     com_claydonkey_hidrd_FilePicker
@@ -83,7 +83,7 @@ JNIEXPORT jobject JNICALL Java_com_claydonkey_hidrd_FilePicker_hidrd_1Xml_1Code_
  * Signature: (Ljava/lang/String;Ljava/lang/String;Landroid/util/Pair;)V
  */
 JNIEXPORT void JNICALL Java_com_claydonkey_hidrd_FilePicker_hidrd_1Xml_1Code_1PairPass
-        (JNIEnv *, jobject, jstring, jstring, jobject);
+  (JNIEnv *, jobject, jstring, jstring, jobject);
 
 #ifdef __cplusplus
 }

@@ -55,7 +55,7 @@ public class FilePicker extends ListActivity {
     public final static String EXTRA_FILE_PATH = "file_path";
     public final static String EXTRA_SHOW_HIDDEN_FILES = "show_hidden_files";
     public final static String EXTRA_ACCEPTED_FILE_EXTENSIONS = "accepted_file_extensions";
-    //private final   String DEFAULT_INITIAL_DIRECTORY =);
+
 
     protected File Directory;
     protected ArrayList<File> Files = new ArrayList<File>();
@@ -121,7 +121,6 @@ public class FilePicker extends ListActivity {
     }
 
     protected void refreshFilesList() {
-
         Files.clear();
         ExtensionFilenameFilter filter = new ExtensionFilenameFilter(acceptedFileExtensions);
 
@@ -140,7 +139,6 @@ public class FilePicker extends ListActivity {
 
     @Override
     public void onBackPressed() {
-
         if (Directory.getParentFile() != null) {
             Directory = Directory.getParentFile();
             refreshFilesList();
@@ -151,14 +149,16 @@ public class FilePicker extends ListActivity {
 
     @Override
     protected void onListItemClick(ListView listView, View view, int position, long id) {
-
         File newFile = (File) listView.getItemAtPosition(position);
 
         if (newFile.isFile()) {
             Intent extra = new Intent();
             extra.putExtra(EXTRA_FILE_PATH, newFile.getAbsolutePath());
-            Pair<Integer, String> res;
-            String result = hidrd_Xml_Code(newFile.getAbsolutePath(), newFile.getParent() + "/test.txt");
+            Pair res = new Pair<>(1, "Foo");
+            this.hidrd_Xml_Code_PairPass(newFile.getAbsolutePath(), newFile.getParent() + "/test.txt", res);
+            //Pair p = this.hidrd_Xml_Code_Pair(newFile.getAbsolutePath(), newFile.getParent() + "/test.txt");
+
+            String result = this.hidrd_Xml_Code(newFile.getAbsolutePath(), newFile.getParent() + "/test.txt");
             setResult(RESULT_OK, extra);
             finish();
         } else {
@@ -179,7 +179,6 @@ public class FilePicker extends ListActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-
             View row = null;
 
             if (convertView == null) {
@@ -207,7 +206,6 @@ public class FilePicker extends ListActivity {
     }
 
     private class FileComparator implements Comparator<File> {
-
         public int compare(File f1, File f2) {
 
             if (f1 == f2)
@@ -221,7 +219,6 @@ public class FilePicker extends ListActivity {
     }
 
     private class ExtensionFilenameFilter implements FilenameFilter {
-
         private String[] Extensions;
 
         public ExtensionFilenameFilter(String[] extensions) {
@@ -230,7 +227,6 @@ public class FilePicker extends ListActivity {
         }
 
         public boolean accept(File dir, String filename) {
-
             if (new File(dir, filename).isDirectory()) {
                 return true;
             }
@@ -253,6 +249,8 @@ public class FilePicker extends ListActivity {
     public native String hidrd_Xml_Code(String inFile, String outFile);
 
     public native Pair<Integer, String> hidrd_Xml_Code_Pair(String inFile, String outFile);
+
+    public native void hidrd_Xml_Code_PairPass(String inFile, String outFile, Pair<Integer, String> chg);
 
     /* this is used to load the library on application
      * startup. The library has already been unpacked into

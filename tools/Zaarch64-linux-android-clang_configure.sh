@@ -42,4 +42,4 @@ export CFLAGS=" -g -O0  ${CFLAGS} ${LIBXML2_CFLAGS}  -fPIE -fPIC -pie   -I${PREF
 export CPPFLAGS="${CFLAGS}"
 export LDFLAGS="${LDFLAGS} -pie -L${SYSROOT}/lib -L${PREFIX}/lib -L${PREFIX}/sysroot/usr/lib -lz"
 
-../../configure $*  --build=x86_64-pc-mingw64  --prefix=/${PREFIX} --exec_prefix=/${PREFIX} --bindir=/${PREFIX}/bin --sbindir=/${PREFIX}/sbin --host=${CROSS_COMPILE}  --target=${CROSS_COMPILE} --with-sysroot=${SYSROOT} --enable-debug  "$@"
+../../configure $*  --build=x86_64-pc-mingw64  --prefix=/${PREFIX} --exec_prefix=/${PREFIX} --bindir=/${PREFIX}/bin --sbindir=/${PREFIX}/sbin --host=${CROSS_COMPILE}  --target=${CROSS_COMPILE} --with-sysroot=${SYSROOT} --enable-debug  "$@" 
