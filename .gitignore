@@ -17,8 +17,6 @@ Makefile.in
 Makefile
 .[^.]*
 *.tar.gz
-/android/bin/
-/android/gen/
 /hidrd-android/gen/
 /hidrd-android-gradle/app/build/
 /hidrd-android/app/build/

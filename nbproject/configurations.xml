@@ -2527,7 +2527,7 @@
     </conf>
     <conf name="arm-linux-androideabi-clang" type="0">
       <toolsSet>
-        <compilerSet>arm-linux-androideabi|MinGW</compilerSet>
+        <compilerSet>aarch64-linux-android-clang|CLang</compilerSet>
         <dependencyChecking>false</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>

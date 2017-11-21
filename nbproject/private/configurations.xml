@@ -7,291 +7,6 @@
       <df name="auxdir">
       </df>
       <df name="build">
-        <df name="aarch64-linux-android">
-          <df name="db">
-            <df name="usage">
-            </df>
-          </df>
-          <df name="dist">
-            <df name="aarch64-linux-android">
-              <df name="bin">
-              </df>
-              <df name="include">
-                <df name="hidrd">
-                  <df name="fmt">
-                    <df name="code">
-                      <in>snk.h</in>
-                    </df>
-                    <df name="hex">
-                      <in>snk.h</in>
-                      <in>src.h</in>
-                    </df>
-                    <df name="natv">
-                      <in>snk.h</in>
-                      <in>src.h</in>
-                    </df>
-                    <df name="spec">
-                      <df name="snk">
-                        <in>ent.h</in>
-                        <in>ent_list.h</in>
-                      </df>
-                      <in>snk.h</in>
-                    </df>
-                    <df name="xml">
-                      <in>cfg.h</in>
-                      <in>prop.h</in>
-                      <in>snk.h</in>
-                      <in>src.h</in>
-                    </df>
-                    <in>cfg.h</in>
-                    <in>code.h</in>
-                    <in>hex.h</in>
-                    <in>inst.h</in>
-                    <in>list.h</in>
-                    <in>natv.h</in>
-                    <in>spec.h</in>
-                    <in>xml.h</in>
-                  </df>
-                  <df name="item">
-                    <df name="pfx">
-                      <in>size.h</in>
-                      <in>tag.h</in>
-                      <in>type.h</in>
-                    </df>
-                    <in>any.h</in>
-                    <in>basic.h</in>
-                    <in>collection.h</in>
-                    <in>delimiter.h</in>
-                    <in>designator_index.h</in>
-                    <in>designator_maximum.h</in>
-                    <in>designator_minimum.h</in>
-                    <in>end_collection.h</in>
-                    <in>feature.h</in>
-                    <in>global.h</in>
-                    <in>input.h</in>
-                    <in>local.h</in>
-                    <in>logical_maximum.h</in>
-                    <in>logical_minimum.h</in>
-                    <in>long.h</in>
-                    <in>main.h</in>
-                    <in>output.h</in>
-                    <in>pfx.h</in>
-                    <in>physical_maximum.h</in>
-                    <in>physical_minimum.h</in>
-                    <in>pop.h</in>
-                    <in>push.h</in>
-                    <in>report_count.h</in>
-                    <in>report_id.h</in>
-                    <in>report_size.h</in>
-                    <in>short.h</in>
-                    <in>string_index.h</in>
-                    <in>string_maximum.h</in>
-                    <in>string_minimum.h</in>
-                    <in>type.h</in>
-                    <in>unit.h</in>
-                    <in>unit_exponent.h</in>
-                    <in>usage.h</in>
-                    <in>usage_maximum.h</in>
-                    <in>usage_minimum.h</in>
-                    <in>usage_page.h</in>
-                  </df>
-                  <df name="opt">
-                    <in>inst.h</in>
-                    <in>list.h</in>
-                    <in>name_tkn.h</in>
-                    <in>spec.h</in>
-                    <in>spec_list.h</in>
-                    <in>tkn.h</in>
-                    <in>tkns.h</in>
-                    <in>tkns_list.h</in>
-                    <in>type.h</in>
-                    <in>value.h</in>
-                    <in>value_tkn.h</in>
-                  </df>
-                  <df name="strm">
-                    <df name="snk">
-                      <in>inst.h</in>
-                      <in>type.h</in>
-                    </df>
-                    <df name="src">
-                      <in>inst.h</in>
-                      <in>type.h</in>
-                    </df>
-                  </df>
-                  <df name="usage">
-                    <in>all.h</in>
-                    <in>id.h</in>
-                    <in>id_desc.h</in>
-                    <in>id_desc_list.h</in>
-                    <in>page.h</in>
-                    <in>page_desc.h</in>
-                    <in>page_desc_list.h</in>
-                    <in>type.h</in>
-                  </df>
-                  <df name="util">
-                    <in>bit.h</in>
-                    <in>bool.h</in>
-                    <in>buf.h</in>
-                    <in>char.h</in>
-                    <in>dec.h</in>
-                    <in>fd.h</in>
-                    <in>fmt.h</in>
-                    <in>hex.h</in>
-                    <in>num.h</in>
-                    <in>obstacklocal.h</in>
-                    <in>str.h</in>
-                    <in>tkn.h</in>
-                    <in>ttbl.h</in>
-                    <in>unit.h</in>
-                  </df>
-                  <in>cfg.h</in>
-                  <in>fmt.h</in>
-                  <in>item.h</in>
-                  <in>opt.h</in>
-                  <in>strm.h</in>
-                </df>
-              </df>
-              <df name="lib">
-              </df>
-              <df name="share">
-                <df name="xml">
-                  <df name="schema">
-                  </df>
-                </df>
-              </df>
-            </df>
-          </df>
-          <df name="include">
-            <df name="hidrd">
-              <df name="adr">
-              </df>
-              <df name="fmt">
-                <df name="code">
-                </df>
-                <df name="hex">
-                </df>
-                <df name="natv">
-                </df>
-                <df name="spec">
-                  <df name="snk">
-                  </df>
-                </df>
-                <df name="xml">
-                  <in>cfg.h</in>
-                </df>
-                <in>cfg.h</in>
-              </df>
-              <df name="item">
-                <df name="pfx">
-                </df>
-              </df>
-              <df name="opt">
-              </df>
-              <df name="strm">
-                <df name="snk">
-                </df>
-                <df name="src">
-                </df>
-              </df>
-              <df name="usage">
-                <in>all.h</in>
-                <in>id_desc_list.h</in>
-                <in>page.h</in>
-                <in>page_desc_list.h</in>
-              </df>
-              <df name="util">
-              </df>
-              <in>cfg.h</in>
-            </df>
-          </df>
-          <df name="lib">
-            <df name="adr">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="fmt">
-              <df name=".libs">
-              </df>
-              <df name="code">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="hex">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="natv">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="read_test_data">
-              </df>
-              <df name="spec">
-                <df name=".libs">
-                </df>
-                <df name="snk">
-                  <df name=".libs">
-                  </df>
-                </df>
-              </df>
-              <df name="write_test_data">
-              </df>
-              <df name="xml">
-                <df name=".libs">
-                </df>
-                <df name="snk">
-                  <df name=".libs">
-                  </df>
-                </df>
-                <df name="src">
-                  <df name=".libs">
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="item">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="opt">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="strm">
-              <df name=".libs">
-              </df>
-              <df name="snk">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="src">
-                <df name=".libs">
-                </df>
-              </df>
-            </df>
-            <df name="usage">
-              <df name=".libs">
-              </df>
-              <in>all.c</in>
-              <in>id_desc_list.c</in>
-              <in>page.c</in>
-              <in>page_desc_list.c</in>
-            </df>
-            <df name="util">
-              <df name=".libs">
-              </df>
-            </df>
-          </df>
-          <df name="m4">
-            <df name="hidrd">
-            </df>
-          </df>
-          <df name="src">
-            <df name=".libs">
-            </df>
-          </df>
-          <in>config.h</in>
-        </df>
         <df name="aarch64-linux-android-clang">
           <df name="db">
             <df name="usage">
@@ -437,6 +152,8 @@
                 </df>
               </df>
               <df name="lib">
+                <df name="arm64-v8a">
+                </df>
               </df>
               <df name="share">
                 <df name="xml">
@@ -573,297 +290,6 @@
           </df>
           <df name="src">
             <df name=".libs">
-            </df>
-          </df>
-          <in>config.h</in>
-        </df>
-        <df name="x86_64-w64-mingw32">
-          <df name="db">
-            <df name="usage">
-            </df>
-          </df>
-          <df name="deps">
-          </df>
-          <df name="dist">
-            <df name="mingw64">
-              <df name="bin">
-              </df>
-              <df name="include">
-                <df name="hidrd">
-                  <df name="fmt">
-                    <df name="code">
-                      <in>snk.h</in>
-                    </df>
-                    <df name="hex">
-                      <in>snk.h</in>
-                      <in>src.h</in>
-                    </df>
-                    <df name="natv">
-                      <in>snk.h</in>
-                      <in>src.h</in>
-                    </df>
-                    <df name="spec">
-                      <df name="snk">
-                        <in>ent.h</in>
-                        <in>ent_list.h</in>
-                      </df>
-                      <in>snk.h</in>
-                    </df>
-                    <df name="xml">
-                      <in>cfg.h</in>
-                      <in>prop.h</in>
-                      <in>snk.h</in>
-                      <in>src.h</in>
-                    </df>
-                    <in>cfg.h</in>
-                    <in>code.h</in>
-                    <in>hex.h</in>
-                    <in>inst.h</in>
-                    <in>list.h</in>
-                    <in>natv.h</in>
-                    <in>spec.h</in>
-                    <in>xml.h</in>
-                  </df>
-                  <df name="item">
-                    <df name="pfx">
-                      <in>size.h</in>
-                      <in>tag.h</in>
-                      <in>type.h</in>
-                    </df>
-                    <in>any.h</in>
-                    <in>basic.h</in>
-                    <in>collection.h</in>
-                    <in>delimiter.h</in>
-                    <in>designator_index.h</in>
-                    <in>designator_maximum.h</in>
-                    <in>designator_minimum.h</in>
-                    <in>end_collection.h</in>
-                    <in>feature.h</in>
-                    <in>global.h</in>
-                    <in>input.h</in>
-                    <in>local.h</in>
-                    <in>logical_maximum.h</in>
-                    <in>logical_minimum.h</in>
-                    <in>long.h</in>
-                    <in>main.h</in>
-                    <in>output.h</in>
-                    <in>pfx.h</in>
-                    <in>physical_maximum.h</in>
-                    <in>physical_minimum.h</in>
-                    <in>pop.h</in>
-                    <in>push.h</in>
-                    <in>report_count.h</in>
-                    <in>report_id.h</in>
-                    <in>report_size.h</in>
-                    <in>short.h</in>
-                    <in>string_index.h</in>
-                    <in>string_maximum.h</in>
-                    <in>string_minimum.h</in>
-                    <in>type.h</in>
-                    <in>unit.h</in>
-                    <in>unit_exponent.h</in>
-                    <in>usage.h</in>
-                    <in>usage_maximum.h</in>
-                    <in>usage_minimum.h</in>
-                    <in>usage_page.h</in>
-                  </df>
-                  <df name="opt">
-                    <in>inst.h</in>
-                    <in>list.h</in>
-                    <in>name_tkn.h</in>
-                    <in>spec.h</in>
-                    <in>spec_list.h</in>
-                    <in>tkn.h</in>
-                    <in>tkns.h</in>
-                    <in>tkns_list.h</in>
-                    <in>type.h</in>
-                    <in>value.h</in>
-                    <in>value_tkn.h</in>
-                  </df>
-                  <df name="strm">
-                    <df name="snk">
-                      <in>inst.h</in>
-                      <in>type.h</in>
-                    </df>
-                    <df name="src">
-                      <in>inst.h</in>
-                      <in>type.h</in>
-                    </df>
-                  </df>
-                  <df name="usage">
-                    <in>all.h</in>
-                    <in>id.h</in>
-                    <in>id_desc.h</in>
-                    <in>id_desc_list.h</in>
-                    <in>page.h</in>
-                    <in>page_desc.h</in>
-                    <in>page_desc_list.h</in>
-                    <in>type.h</in>
-                  </df>
-                  <df name="util">
-                    <in>bit.h</in>
-                    <in>bool.h</in>
-                    <in>buf.h</in>
-                    <in>char.h</in>
-                    <in>dec.h</in>
-                    <in>fd.h</in>
-                    <in>fmt.h</in>
-                    <in>hex.h</in>
-                    <in>num.h</in>
-                    <in>obstacklocal.h</in>
-                    <in>str.h</in>
-                    <in>tkn.h</in>
-                    <in>ttbl.h</in>
-                    <in>unit.h</in>
-                  </df>
-                  <in>cfg.h</in>
-                  <in>fmt.h</in>
-                  <in>item.h</in>
-                  <in>opt.h</in>
-                  <in>strm.h</in>
-                </df>
-              </df>
-              <df name="lib">
-              </df>
-              <df name="share">
-                <df name="xml">
-                  <df name="schema">
-                  </df>
-                </df>
-              </df>
-            </df>
-          </df>
-          <df name="include">
-            <df name="hidrd">
-              <df name="adr">
-              </df>
-              <df name="fmt">
-                <df name="code">
-                </df>
-                <df name="hex">
-                </df>
-                <df name="natv">
-                </df>
-                <df name="spec">
-                  <df name="snk">
-                  </df>
-                </df>
-                <df name="xml">
-                  <in>cfg.h</in>
-                </df>
-                <in>cfg.h</in>
-              </df>
-              <df name="item">
-                <df name="pfx">
-                </df>
-              </df>
-              <df name="opt">
-              </df>
-              <df name="strm">
-                <df name="snk">
-                </df>
-                <df name="src">
-                </df>
-              </df>
-              <df name="usage">
-                <in>all.h</in>
-                <in>id_desc_list.h</in>
-                <in>page.h</in>
-                <in>page_desc_list.h</in>
-              </df>
-              <df name="util">
-              </df>
-              <in>cfg.h</in>
-            </df>
-          </df>
-          <df name="lib">
-            <df name="adr">
-            </df>
-            <df name="fmt">
-              <df name=".libs">
-              </df>
-              <df name="code">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="hex">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="natv">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="read_test_data">
-              </df>
-              <df name="spec">
-                <df name=".libs">
-                </df>
-                <df name="snk">
-                  <df name=".libs">
-                  </df>
-                </df>
-              </df>
-              <df name="write_test_data">
-              </df>
-              <df name="xml">
-                <df name=".libs">
-                </df>
-                <df name="snk">
-                  <df name=".libs">
-                  </df>
-                </df>
-                <df name="src">
-                  <df name=".libs">
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="item">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="opt">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="strm">
-              <df name=".libs">
-              </df>
-              <df name="snk">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="src">
-                <df name=".libs">
-                </df>
-              </df>
-            </df>
-            <df name="usage">
-              <df name=".libs">
-              </df>
-              <in>all.c</in>
-              <in>id_desc_list.c</in>
-              <in>page.c</in>
-              <in>page_desc_list.c</in>
-            </df>
-            <df name="util">
-              <df name=".libs">
-              </df>
-            </df>
-          </df>
-          <df name="m4">
-            <df name="hidrd">
-            </df>
-          </df>
-          <df name="src">
-            <df name=".libs">
-            </df>
-            <df name="mingw">
-              <df name="mingw64">
-                <df name="bin">
-                </df>
-              </df>
             </df>
           </df>
           <in>config.h</in>
@@ -871,6 +297,18 @@
       </df>
       <df name="db">
         <df name="usage">
+        </df>
+      </df>
+      <df name="dist">
+        <df name="lib">
+          <df name="arm64-v8a">
+          </df>
+        </df>
+      </df>
+      <df name="hidrd">
+        <df name="hidrd-android">
+          <df name="app">
+          </df>
         </df>
       </df>
       <df name="hidrd-android">
@@ -1016,6 +454,12 @@
                     </df>
                   </df>
                 </df>
+                <df name="release">
+                  <df name="obj">
+                    <df name="arm64-v8a">
+                    </df>
+                  </df>
+                </df>
               </df>
               <df name="incremental">
                 <df name="compileDebugAidl">
@@ -1058,10 +502,14 @@
                   <df name="arm64-v8aDebug">
                     <df name="zip-cache">
                     </df>
+                    <in>dex-renamer-state.txt</in>
+                    <in>file-input-save-data.txt</in>
                   </df>
                   <df name="universalDebug">
                     <df name="zip-cache">
                     </df>
+                    <in>dex-renamer-state.txt</in>
+                    <in>file-input-save-data.txt</in>
                   </df>
                 </df>
                 <df name="processDebugAndroidTestResources">
@@ -1079,9 +527,9 @@
               </df>
               <df name="jniLibs">
                 <df name="debug">
+                  <df name="arm64-v8a">
+                  </df>
                 </df>
-              </df>
-              <df name="lint">
               </df>
               <df name="manifest">
                 <df name="androidTest">
@@ -1250,18 +698,13 @@
                 </df>
               </df>
               <df name="logs">
+                <in>manifest-merger-debug-report.txt</in>
               </df>
             </df>
             <df name="tmp">
-              <df name="bundleAppClassesDebug">
-              </df>
-              <df name="compileDebugAndroidTestJavaWithJavac">
-              </df>
               <df name="compileDebugJavaWithJavac">
               </df>
             </df>
-          </df>
-          <df name="release">
           </df>
           <df name="src">
             <df name="main">
@@ -1269,7 +712,7 @@
                 <in>hidrd_jni.c</in>
                 <in>hidrd_jni.h</in>
               </df>
-              <df name="java">
+              <df name="gen">
                 <df name="com">
                   <df name="claydonkey">
                     <df name="hidrd">
@@ -1277,8 +720,12 @@
                   </df>
                 </df>
               </df>
-              <df name="jniLibs">
-                <df name="arm64-v8a">
+              <df name="java">
+                <df name="com">
+                  <df name="claydonkey">
+                    <df name="hidrd">
+                    </df>
+                  </df>
                 </df>
               </df>
               <df name="res">
@@ -1303,18 +750,219 @@
               </df>
             </df>
           </df>
+          <in>CMakeLists.txt</in>
         </df>
         <df name="build">
           <df name="android-profile">
+          </df>
+        </df>
+        <df name="distribution">
+          <df name="include">
+            <df name="hidrd">
+              <df name="fmt">
+                <df name="code">
+                  <in>snk.h</in>
+                </df>
+                <df name="hex">
+                  <in>snk.h</in>
+                  <in>src.h</in>
+                </df>
+                <df name="natv">
+                  <in>snk.h</in>
+                  <in>src.h</in>
+                </df>
+                <df name="spec">
+                  <df name="snk">
+                    <in>ent.h</in>
+                    <in>ent_list.h</in>
+                  </df>
+                  <in>snk.h</in>
+                </df>
+                <df name="xml">
+                  <in>cfg.h</in>
+                  <in>prop.h</in>
+                  <in>snk.h</in>
+                  <in>src.h</in>
+                </df>
+                <in>cfg.h</in>
+                <in>code.h</in>
+                <in>hex.h</in>
+                <in>inst.h</in>
+                <in>list.h</in>
+                <in>natv.h</in>
+                <in>spec.h</in>
+                <in>xml.h</in>
+              </df>
+              <df name="item">
+                <df name="pfx">
+                  <in>size.h</in>
+                  <in>tag.h</in>
+                  <in>type.h</in>
+                </df>
+                <in>any.h</in>
+                <in>basic.h</in>
+                <in>collection.h</in>
+                <in>delimiter.h</in>
+                <in>designator_index.h</in>
+                <in>designator_maximum.h</in>
+                <in>designator_minimum.h</in>
+                <in>end_collection.h</in>
+                <in>feature.h</in>
+                <in>global.h</in>
+                <in>input.h</in>
+                <in>local.h</in>
+                <in>logical_maximum.h</in>
+                <in>logical_minimum.h</in>
+                <in>long.h</in>
+                <in>main.h</in>
+                <in>output.h</in>
+                <in>pfx.h</in>
+                <in>physical_maximum.h</in>
+                <in>physical_minimum.h</in>
+                <in>pop.h</in>
+                <in>push.h</in>
+                <in>report_count.h</in>
+                <in>report_id.h</in>
+                <in>report_size.h</in>
+                <in>short.h</in>
+                <in>string_index.h</in>
+                <in>string_maximum.h</in>
+                <in>string_minimum.h</in>
+                <in>type.h</in>
+                <in>unit.h</in>
+                <in>unit_exponent.h</in>
+                <in>usage.h</in>
+                <in>usage_maximum.h</in>
+                <in>usage_minimum.h</in>
+                <in>usage_page.h</in>
+              </df>
+              <df name="opt">
+                <in>inst.h</in>
+                <in>list.h</in>
+                <in>name_tkn.h</in>
+                <in>spec.h</in>
+                <in>spec_list.h</in>
+                <in>tkn.h</in>
+                <in>tkns.h</in>
+                <in>tkns_list.h</in>
+                <in>type.h</in>
+                <in>value.h</in>
+                <in>value_tkn.h</in>
+              </df>
+              <df name="strm">
+                <df name="snk">
+                  <in>inst.h</in>
+                  <in>type.h</in>
+                </df>
+                <df name="src">
+                  <in>inst.h</in>
+                  <in>type.h</in>
+                </df>
+              </df>
+              <df name="usage">
+                <in>all.h</in>
+                <in>id.h</in>
+                <in>id_desc.h</in>
+                <in>id_desc_list.h</in>
+                <in>page.h</in>
+                <in>page_desc.h</in>
+                <in>page_desc_list.h</in>
+                <in>type.h</in>
+              </df>
+              <df name="util">
+                <in>bit.h</in>
+                <in>bool.h</in>
+                <in>buf.h</in>
+                <in>char.h</in>
+                <in>dec.h</in>
+                <in>fd.h</in>
+                <in>fmt.h</in>
+                <in>hex.h</in>
+                <in>num.h</in>
+                <in>obstacklocal.h</in>
+                <in>str.h</in>
+                <in>tkn.h</in>
+                <in>ttbl.h</in>
+                <in>unit.h</in>
+              </df>
+              <in>cfg.h</in>
+              <in>fmt.h</in>
+              <in>item.h</in>
+              <in>opt.h</in>
+              <in>strm.h</in>
+            </df>
+            <df name="libxml">
+              <in>DOCBparser.h</in>
+              <in>HTMLparser.h</in>
+              <in>HTMLtree.h</in>
+              <in>SAX.h</in>
+              <in>SAX2.h</in>
+              <in>c14n.h</in>
+              <in>catalog.h</in>
+              <in>chvalid.h</in>
+              <in>debugXML.h</in>
+              <in>dict.h</in>
+              <in>encoding.h</in>
+              <in>entities.h</in>
+              <in>globals.h</in>
+              <in>hash.h</in>
+              <in>list.h</in>
+              <in>nanoftp.h</in>
+              <in>nanohttp.h</in>
+              <in>parser.h</in>
+              <in>parserInternals.h</in>
+              <in>pattern.h</in>
+              <in>relaxng.h</in>
+              <in>schemasInternals.h</in>
+              <in>schematron.h</in>
+              <in>threads.h</in>
+              <in>tree.h</in>
+              <in>uri.h</in>
+              <in>valid.h</in>
+              <in>xinclude.h</in>
+              <in>xlink.h</in>
+              <in>xmlIO.h</in>
+              <in>xmlautomata.h</in>
+              <in>xmlerror.h</in>
+              <in>xmlexports.h</in>
+              <in>xmlmemory.h</in>
+              <in>xmlmodule.h</in>
+              <in>xmlreader.h</in>
+              <in>xmlregexp.h</in>
+              <in>xmlsave.h</in>
+              <in>xmlschemas.h</in>
+              <in>xmlschemastypes.h</in>
+              <in>xmlstring.h</in>
+              <in>xmlunicode.h</in>
+              <in>xmlversion.h</in>
+              <in>xmlwriter.h</in>
+              <in>xpath.h</in>
+              <in>xpathInternals.h</in>
+              <in>xpointer.h</in>
+            </df>
+          </df>
+          <df name="lib">
+            <df name="arm64-v8a">
+            </df>
           </df>
         </df>
         <df name="gradle">
           <df name="wrapper">
           </df>
         </df>
+        <in>com_claydonkey_hidrd_FilePicker.h</in>
+        <in>com_claydonkey_hidrd_FilePicker_ExtensionFilenameFilter.h</in>
+        <in>com_claydonkey_hidrd_FilePicker_FileComparator.h</in>
+        <in>com_claydonkey_hidrd_FilePicker_FilePickerListAdapter.h</in>
       </df>
       <df name="hidrd-android-ant">
         <df name="gen">
+          <df name="com">
+            <df name="claydonkey">
+              <df name="hidrd">
+              </df>
+            </df>
+          </df>
         </df>
         <df name="libs">
           <df name="arm64-v8a">
@@ -1352,6 +1000,8 @@
             </df>
           </df>
         </df>
+        <in>JNI_HEADER.txt</in>
+        <in>proguard-project.txt</in>
       </df>
       <df name="include">
         <df name="hidrd">
@@ -1666,12 +1316,6 @@
           <in>type.c</in>
         </df>
         <df name="util">
-          <df name="andy">
-            <df name="aarch64-linux-android-clang">
-              <df name="lib">
-              </df>
-            </df>
-          </df>
           <in>bool.c</in>
           <in>buf.c</in>
           <in>char.c</in>
@@ -1701,11 +1345,13 @@
       <df name="tools">
         <df name="System">
         </df>
+        <in>JNI_HEADER.txt</in>
+        <in>com_claydonkey_hidrd_FilePicker.h</in>
+        <in>com_claydonkey_hidrd_FilePicker_ExtensionFilenameFilter.h</in>
+        <in>com_claydonkey_hidrd_FilePicker_FileComparator.h</in>
+        <in>com_claydonkey_hidrd_FilePicker_FilePickerListAdapter.h</in>
       </df>
-      <in>com_claydonkey_hidrd_FilePicker.h</in>
-      <in>com_claydonkey_hidrd_FilePicker_ExtensionFilenameFilter.h</in>
-      <in>com_claydonkey_hidrd_FilePicker_FileComparator.h</in>
-      <in>com_claydonkey_hidrd_FilePicker_FilePickerListAdapter.h</in>
+      <in>CMakeLists.txt</in>
     </df>
     <df root="." name="1">
       <df name="autom4te.cache">
@@ -1713,178 +1359,6 @@
       <df name="auxdir">
       </df>
       <df name="build">
-        <df name="aarch64-linux-android">
-          <df name="db">
-            <df name="usage">
-            </df>
-          </df>
-          <df name="dist">
-            <df name="aarch64-linux-android">
-              <df name="bin">
-              </df>
-              <df name="include">
-                <df name="hidrd">
-                  <df name="fmt">
-                    <df name="code">
-                    </df>
-                    <df name="hex">
-                    </df>
-                    <df name="natv">
-                    </df>
-                    <df name="spec">
-                      <df name="snk">
-                      </df>
-                    </df>
-                    <df name="xml">
-                    </df>
-                  </df>
-                  <df name="item">
-                    <df name="pfx">
-                    </df>
-                  </df>
-                  <df name="opt">
-                  </df>
-                  <df name="strm">
-                    <df name="snk">
-                    </df>
-                    <df name="src">
-                    </df>
-                  </df>
-                  <df name="usage">
-                  </df>
-                  <df name="util">
-                  </df>
-                </df>
-              </df>
-              <df name="lib">
-              </df>
-              <df name="share">
-                <df name="xml">
-                  <df name="schema">
-                  </df>
-                </df>
-              </df>
-            </df>
-          </df>
-          <df name="include">
-            <df name="hidrd">
-              <df name="adr">
-              </df>
-              <df name="fmt">
-                <df name="code">
-                </df>
-                <df name="hex">
-                </df>
-                <df name="natv">
-                </df>
-                <df name="spec">
-                  <df name="snk">
-                  </df>
-                </df>
-                <df name="xml">
-                </df>
-              </df>
-              <df name="item">
-                <df name="pfx">
-                </df>
-              </df>
-              <df name="opt">
-              </df>
-              <df name="strm">
-                <df name="snk">
-                </df>
-                <df name="src">
-                </df>
-              </df>
-              <df name="usage">
-              </df>
-              <df name="util">
-              </df>
-            </df>
-          </df>
-          <df name="lib">
-            <df name="adr">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="fmt">
-              <df name=".libs">
-              </df>
-              <df name="code">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="hex">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="natv">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="read_test_data">
-              </df>
-              <df name="spec">
-                <df name=".libs">
-                </df>
-                <df name="snk">
-                  <df name=".libs">
-                  </df>
-                </df>
-              </df>
-              <df name="write_test_data">
-              </df>
-              <df name="xml">
-                <df name=".libs">
-                </df>
-                <df name="snk">
-                  <df name=".libs">
-                  </df>
-                </df>
-                <df name="src">
-                  <df name=".libs">
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="item">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="opt">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="strm">
-              <df name=".libs">
-              </df>
-              <df name="snk">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="src">
-                <df name=".libs">
-                </df>
-              </df>
-            </df>
-            <df name="usage">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="util">
-              <df name=".libs">
-              </df>
-            </df>
-          </df>
-          <df name="m4">
-            <df name="hidrd">
-            </df>
-          </df>
-          <df name="src">
-            <df name=".libs">
-            </df>
-          </df>
-        </df>
         <df name="aarch64-linux-android-clang">
           <df name="db">
             <df name="usage">
@@ -1929,6 +1403,8 @@
                 </df>
               </df>
               <df name="lib">
+                <df name="arm64-v8a">
+                </df>
               </df>
               <df name="share">
                 <df name="xml">
@@ -2054,190 +1530,24 @@
           </df>
           <df name="src">
             <df name=".libs">
-            </df>
-          </df>
-        </df>
-        <df name="x86_64-w64-mingw32">
-          <df name="db">
-            <df name="usage">
-            </df>
-          </df>
-          <df name="deps">
-          </df>
-          <df name="dist">
-            <df name="mingw64">
-              <df name="bin">
-              </df>
-              <df name="include">
-                <df name="hidrd">
-                  <df name="fmt">
-                    <df name="code">
-                    </df>
-                    <df name="hex">
-                    </df>
-                    <df name="natv">
-                    </df>
-                    <df name="spec">
-                      <df name="snk">
-                      </df>
-                    </df>
-                    <df name="xml">
-                    </df>
-                  </df>
-                  <df name="item">
-                    <df name="pfx">
-                    </df>
-                  </df>
-                  <df name="opt">
-                  </df>
-                  <df name="strm">
-                    <df name="snk">
-                    </df>
-                    <df name="src">
-                    </df>
-                  </df>
-                  <df name="usage">
-                  </df>
-                  <df name="util">
-                  </df>
-                </df>
-              </df>
-              <df name="lib">
-              </df>
-              <df name="share">
-                <df name="xml">
-                  <df name="schema">
-                  </df>
-                </df>
-              </df>
-            </df>
-          </df>
-          <df name="include">
-            <df name="hidrd">
-              <df name="adr">
-              </df>
-              <df name="fmt">
-                <df name="code">
-                </df>
-                <df name="hex">
-                </df>
-                <df name="natv">
-                </df>
-                <df name="spec">
-                  <df name="snk">
-                  </df>
-                </df>
-                <df name="xml">
-                </df>
-              </df>
-              <df name="item">
-                <df name="pfx">
-                </df>
-              </df>
-              <df name="opt">
-              </df>
-              <df name="strm">
-                <df name="snk">
-                </df>
-                <df name="src">
-                </df>
-              </df>
-              <df name="usage">
-              </df>
-              <df name="util">
-              </df>
-            </df>
-          </df>
-          <df name="lib">
-            <df name="adr">
-            </df>
-            <df name="fmt">
-              <df name=".libs">
-              </df>
-              <df name="code">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="hex">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="natv">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="read_test_data">
-              </df>
-              <df name="spec">
-                <df name=".libs">
-                </df>
-                <df name="snk">
-                  <df name=".libs">
-                  </df>
-                </df>
-              </df>
-              <df name="write_test_data">
-              </df>
-              <df name="xml">
-                <df name=".libs">
-                </df>
-                <df name="snk">
-                  <df name=".libs">
-                  </df>
-                </df>
-                <df name="src">
-                  <df name=".libs">
-                  </df>
-                </df>
-              </df>
-            </df>
-            <df name="item">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="opt">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="strm">
-              <df name=".libs">
-              </df>
-              <df name="snk">
-                <df name=".libs">
-                </df>
-              </df>
-              <df name="src">
-                <df name=".libs">
-                </df>
-              </df>
-            </df>
-            <df name="usage">
-              <df name=".libs">
-              </df>
-            </df>
-            <df name="util">
-              <df name=".libs">
-              </df>
-            </df>
-          </df>
-          <df name="m4">
-            <df name="hidrd">
-            </df>
-          </df>
-          <df name="src">
-            <df name=".libs">
-            </df>
-            <df name="mingw">
-              <df name="mingw64">
-                <df name="bin">
-                </df>
-              </df>
             </df>
           </df>
         </df>
       </df>
       <df name="db">
         <df name="usage">
+        </df>
+      </df>
+      <df name="dist">
+        <df name="lib">
+          <df name="arm64-v8a">
+          </df>
+        </df>
+      </df>
+      <df name="hidrd">
+        <df name="hidrd-android">
+          <df name="app">
+          </df>
         </df>
       </df>
       <df name="hidrd-android">
@@ -2383,6 +1693,12 @@
                     </df>
                   </df>
                 </df>
+                <df name="release">
+                  <df name="obj">
+                    <df name="arm64-v8a">
+                    </df>
+                  </df>
+                </df>
               </df>
               <df name="incremental">
                 <df name="compileDebugAidl">
@@ -2446,9 +1762,9 @@
               </df>
               <df name="jniLibs">
                 <df name="debug">
+                  <df name="arm64-v8a">
+                  </df>
                 </df>
-              </df>
-              <df name="lint">
               </df>
               <df name="manifest">
                 <df name="androidTest">
@@ -2620,21 +1936,15 @@
               </df>
             </df>
             <df name="tmp">
-              <df name="bundleAppClassesDebug">
-              </df>
-              <df name="compileDebugAndroidTestJavaWithJavac">
-              </df>
               <df name="compileDebugJavaWithJavac">
               </df>
             </df>
-          </df>
-          <df name="release">
           </df>
           <df name="src">
             <df name="main">
               <df name="cpp">
               </df>
-              <df name="java">
+              <df name="gen">
                 <df name="com">
                   <df name="claydonkey">
                     <df name="hidrd">
@@ -2642,8 +1952,12 @@
                   </df>
                 </df>
               </df>
-              <df name="jniLibs">
-                <df name="arm64-v8a">
+              <df name="java">
+                <df name="com">
+                  <df name="claydonkey">
+                    <df name="hidrd">
+                    </df>
+                  </df>
                 </df>
               </df>
               <df name="res">
@@ -2673,6 +1987,48 @@
           <df name="android-profile">
           </df>
         </df>
+        <df name="distribution">
+          <df name="include">
+            <df name="hidrd">
+              <df name="fmt">
+                <df name="code">
+                </df>
+                <df name="hex">
+                </df>
+                <df name="natv">
+                </df>
+                <df name="spec">
+                  <df name="snk">
+                  </df>
+                </df>
+                <df name="xml">
+                </df>
+              </df>
+              <df name="item">
+                <df name="pfx">
+                </df>
+              </df>
+              <df name="opt">
+              </df>
+              <df name="strm">
+                <df name="snk">
+                </df>
+                <df name="src">
+                </df>
+              </df>
+              <df name="usage">
+              </df>
+              <df name="util">
+              </df>
+            </df>
+            <df name="libxml">
+            </df>
+          </df>
+          <df name="lib">
+            <df name="arm64-v8a">
+            </df>
+          </df>
+        </df>
         <df name="gradle">
           <df name="wrapper">
           </df>
@@ -2680,6 +2036,12 @@
       </df>
       <df name="hidrd-android-ant">
         <df name="gen">
+          <df name="com">
+            <df name="claydonkey">
+              <df name="hidrd">
+              </df>
+            </df>
+          </df>
         </df>
         <df name="libs">
           <df name="arm64-v8a">
@@ -2854,12 +2216,6 @@
         <df name="usage">
         </df>
         <df name="util">
-          <df name="andy">
-            <df name="aarch64-linux-android-clang">
-              <df name="lib">
-              </df>
-            </df>
-          </df>
         </df>
       </df>
       <df name="m4">
