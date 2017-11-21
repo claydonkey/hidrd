@@ -258,16 +258,62 @@ static int process(const char *input_name, const char *input_fmt_name, const cha
 
 /*
  * Class:     com_claydonkey_hidrd_FilePicker
+ * Method:    hidrd_Xml_Code_PairPass
+ * Signature: (Ljava/lang/String;Ljava/lang/String;Landroid/util/Pair;)V
+ */
+JNIEXPORT void JNICALL Java_com_claydonkey_hidrd_FilePicker_hidrd_1Xml_1Code_1PairPass
+        (JNIEnv *env, jobject obj, jstring jinFile, jstring joutFle, jobject obj2) {
+    jclass obj_Pair = (*env)->GetObjectClass(env, obj2);
+    jstring _string = (*env)->NewStringUTF(env, "Foo");
+    jint _integer = 1;
+    jfieldID first = (jclass) (*env)->GetFieldID(env, obj_Pair, "first", "I");
+    jfieldID second = (jclass) (*env)->GetFieldID(env, obj_Pair, "second",  "Ljava/lang/String;");
+    (*env)->SetIntField(env, obj_Pair, first, _integer);
+    (*env)->SetObjectField(env, obj_Pair, second, _string);
+    jmethodID ctor_Pair = (jclass) (*env)->GetMethodID(env, obj_Pair, "<init>",
+                                                       "(ILjava/lang/String;)(V)");
+
+    if (ctor_Pair == NULL) {
+        LOGE("%s, GetMethodID nullptr\n", __func__);
+
+    }
+}
+
+
+/*
+ * Class:     com_claydonkey_hidrd_FilePicker
  * Method:    hidrd_Xml_Code_Pair
  * Signature: (Ljava/lang/String;Ljava/lang/String;)Landroid/util/Pair;
  */
 JNIEXPORT jobject JNICALL Java_com_claydonkey_hidrd_FilePicker_hidrd_1Xml_1Code_1Pair
         (JNIEnv *env, jobject obj, jstring jinFile, jstring joutFile) {
-    jclass cls_Pair = (jclass) (*env)->FindClass(env, "android/util/Pair");
-    jmethodID cls_PairCtor = (jclass) (*env)->GetMethodID(env, cls_Pair, "<init>", "()V");
-    jobject obj_Pair = (jclass) (*env)->NewObject(env, cls_Pair, cls_PairCtor);
+
+    jstring _string = (*env)->NewStringUTF(env, "Foo");
+    jint _integer = 1;
+
+
+    jclass cls_Pair = (jclass) (*env)->FindClass(env,
+                                                 "android/util/Pair");
+
+
+    jmethodID ctor_Pair = (jclass) (*env)->GetMethodID(env, cls_Pair, "<init>",
+                                                       "(ILjava/lang/String;)(V)");
+
+    if (ctor_Pair == NULL) {
+        LOGE("%s, GetMethodID nullptr\n", __func__);
+        return NULL;
+    }
+
+    jobject obj_Pair = (jclass) (*env)->NewObject(env, cls_Pair, ctor_Pair, _integer, _string);
+
+    jfieldID first = (jclass) (*env)->GetFieldID(env, obj_Pair, "First", "I");
+    jfieldID second = (jclass) (*env)->GetFieldID(env, obj_Pair, "Second", "Ljava/lang/String;");
+    (*env)->SetIntField(env, obj_Pair, first, _integer);
+    (*env)->SetObjectField(env, obj_Pair, second, _string);
 
     return obj_Pair;
+
+
 }
 
 /*
@@ -291,7 +337,8 @@ JNIEXPORT jstring JNICALL Java_com_claydonkey_hidrd_FilePicker_hidrd_1Xml_1Code
     jmethodID mid_getExtStorage = (*env)->GetMethodID(env, cls_Env, "getExternalFilesDir",
                                                       "(Ljava/lang/String;)Ljava/io/File;");
     jobject obj_File = (*env)->CallObjectMethod(env, obj, mid_getExtStorage, NULL);
-    jmethodID mid_getPath = (*env)->GetMethodID(env, cls_File, "getPath", "()Ljava/lang/String;");
+    jmethodID mid_getPath = (*env)->GetMethodID(env, cls_File, "getPath",
+                                                "()Ljava/lang/String;");
     jobject obj_Path = (jstring) (*env)->CallObjectMethod(env, obj_File, mid_getPath);
     const char *path = (*env)->GetStringUTFChars(env, obj_Path, NULL);
 
